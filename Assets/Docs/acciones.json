@@ -1,0 +1,64 @@
+{
+	"api_exception":"",
+	"data":
+	[
+		{
+			"acciones":
+			[
+				{
+					"comentario":"EL COMANDANTE ALVARADO ENCARGADO DEL FARO 2, DESPLIEGA UN OPERATIVO DE REACCIÓN PARA LOCALIZAR EL VEHÍCULO DE LA VÍCTIMA, YA QUE LOS ARCOS LECTORES NOS DIERON UNA UBICACIÓN DONDE PASÓ A LAS 15:22 HRS",
+					"fecha":"2020-12-01T15:45:42Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6265
+				},
+				{
+					"comentario":"LA FAMILIA DE LA VÍCTIMA REFIERE QUE YA FUERON CONTACTADOS, Y QUE EFECTIVAMENTE SE TRATA DE UN SECUESTRO EN AGRAVIO DE SU FAMILIAR. SE INICIA PROTOCOLO DE ACTUACIÓN CONTRA EL SECUESTRO Y ASESORAMIENTO A LA FAMILIA DE LA VÍCTIMA ",
+					"fecha":"2020-12-03T09:13:13Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6266
+				},
+				{
+					"comentario":"LOS SECUESTRADORES NUEVAMENTE SE COMUNICAN Y FIJAN EL MONTO DE LA LIBERACIÓN EN 800,000 PESOS, AUN NO SE INDICA EL LUGAR DEL INTERCAMBIO",
+					"fecha":"2020-12-04T10:02:27Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6267
+				},
+				{
+					"comentario":"SE FIJA EL LUGAR DE LA ENTREGA DEL DINERO, EN AV JOSE MARIA MORELOS, SOBRE OCOTLAN, JUNTO A LA PASTELERÍA SEGOVIA HAY UN TERRENO BALDÍO ",
+					"fecha":"2020-12-04T10:18:07Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6268
+				},
+				{
+					"comentario":"LA FAMILIA REFIERE QUE HAN REALIZADO EL PAGO COMPLETO DEL RESCATE PARA LA PRONTA LIBERACIÓN DE SU FAMILIAR",
+					"fecha":"2020-12-07T15:22:13Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6269
+				},
+				{
+					"comentario":"EL COMANDANTE ALVARADO SE APOYA DE DOS COMANDANTE MAS PARA REALIZAR EL OPERATIVO DE CAPTURA DE LOS SECUESTRADORES, TODO A SU VEZ QUE LA VÍCTIMA HA SIDO LIBERADA SIN DAÑO FÍSICO APARENTE",
+					"fecha":"2020-12-07T21:29:03Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6270
+				},
+				{
+					"comentario":"LOS PRESUNTOS SECUESTRADORES SE HAN LOCALIZADO A TRAVÉS DE TRABAJOS DE INTELIGENCIA, LOS COMANDANTES A CARGO DEL OPERATIVO DE DETENCIÓN, LIBERADOS CON EL COMANDANTE DEL FARO 2 DESPLIEGAN LAS FUERZAS ESPECIALES",
+					"fecha":"2020-12-08T02:04:31Z",
+					"fk_idTicket":"",
+					"fk_idUsuario":4,
+					"idcomentario":6271
+				}
+			]
+		}
+	],
+	"error_code":0,
+	"error_message":"",
+	"result":true,
+	"0":")]}',\\n"
+}

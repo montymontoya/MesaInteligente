@@ -1,0 +1,65 @@
+{
+    "bandas":
+    [
+            {
+                "nombre":"Los zetas",
+                "lider":"Arturo Guzman",
+                "delitos":"1",
+                "lugar":"Puebla"
+            },
+            {
+               "nombre":"El cartel de sinaloa",
+                "lider":"Francisco Torres",
+                "delitos":"2",
+                "lugar":"Sinaloa"
+            },
+            {
+                "nombre":"Cartel de Jalisco",
+                "lider":"Beto Renteria",
+                "delitos":"3",
+                "lugar":"Jalisco"
+            },
+            {
+               "nombre":"Cartel del golfo",
+                "lider":"Juan Alvarado",
+                "delitos":"4",
+                "lugar":"Veracruz"
+            },
+            {
+                "nombre":"Cartel beltran",
+                "lider":"La barbie",
+                "delitos":"5",
+                "lugar":"Puebla"
+            },
+            {
+                "nombre":"Los caballeros templarios",
+                "lider":"El barba roja",
+                "delitos":"6",
+                "lugar":"Puebla"
+            },
+	    {
+                "nombre":"La familia michoana",
+                "lider":"Jose Antonio Cruz",
+                "delitos":"7",
+                "lugar":"Puebla"
+            },
+	    {
+                "nombre":"Cartel del Norte del valle",
+                "lider":"Gil Villa",
+                "delitos":"8",
+                "lugar":"Monterrey"
+            },
+	    {
+                "nombre":"Los Mara Salvatrucha",
+                "lider":"Mario Quintero",
+                "delitos":"9",
+                "lugar":"Puebla"
+            },
+	    {
+                "nombre":"Cartel de tijuana",
+                "lider":"Santiago peréz",
+                "delitos":"10",
+                "lugar":"Tijuana"
+            }
+    ]
+}

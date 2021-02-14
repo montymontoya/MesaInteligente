@@ -1,0 +1,98 @@
+{
+	"api_exception":"",
+	"data":
+	[
+		{
+			"CatDelito":
+			{
+				"CatHecho":
+				{
+					"CatDenuncia":
+					{
+						"id":3,
+						"title":"SEGURIDAD"
+					},
+					"fk_idDenuncia":3,
+					"id":306,
+					"nombre":"ATENTADOS CONTRA LA LIBERTAD PERSONAL"
+				},
+				"CatIcono":
+				{
+					"id":1,
+					"nombre":"N/A",
+					"nombreEncryptado":"N/A"
+				},
+				"CatSeguimiento":
+				{
+					"id":2,
+					"title":"No"
+				},
+				"descripcion":"PRIVACIÓN DE LA LIBERTAD PERSONAL Y ESPACIAL COMO MEDIO DE PRESIÓN, A EFECTO DE OBTENER CON ELLO EL CUMPLIMIENTO DE UNA PRESTACIÓN OTORGADA POR LA VÍCTIMA O POR UN TERCERO",
+				"fk_idHecho":306,
+				"fk_idIcono":1,
+				"fk_idSeguimiento":2,
+				"id":30605,
+				"nombre":"SECUESTRO"
+			},
+			"CatEstatus":
+			{"id":1,"title":"Activo"},
+			"CatPrioridad":{"colors":"#D9534FFF","id":4,"prioridad":"emergencia","prioridad_desc":"Emergencia","prioridad_urgency":1},
+			"descripcion":"EL CIUDADANO JUAN RAMON REPORTA EL APARENTE SECUESTRO DE SU VECINO, JORGE SUAREZ GARCIA, AFUERA DE SU CASA. COMENTA QUE FUERON 4 SUJETOS A BORDO DE 2 VEHÍCULOS. UN NISSAN BLANCO Y UN FORD ROJO.",
+			"direccion":
+			{
+				"calle":"PLAZA DE LA CONSTITUCIÓN",
+				"CatMunicipio":
+				{
+					"catEstado":
+					{
+						"id":29,"title":"TLAXCALA"
+					},
+					"fk_idEstado":29,
+					"id":2072,
+					"nombre":"TLAXCALA"
+				},
+				"colonia":"TLAXCALA CENTRO",
+				"cp":"     ",
+				"entrecalles":"",
+				"ext":"2",
+				"fk_idMunicipio":2072,
+				"int":"",
+				"lat":"19.3174",
+				"lgt":"-98.23856",
+				"referencias":""
+				},
+				"fechaAtendio":"2020-12-01T15:04:27Z",
+				"fechaCerro":null,
+				"fechaCreacion":"2020-12-01T15:00:27Z",
+				"fechaSucedio":"2020-12-01T15:00:27Z",
+				"figurasPublicas":false,
+				"fk_idDelito":"30605",
+				"fk_idPrioridad":4,
+				"fk_idStatus":1,
+				"Icono":"http://eonproduccion.net/CICG_SEG/COMMON/Icons/N/A",
+				"identificacion":
+				{
+					"calle":"",
+					"colonia":"",
+					"cp":"     ",
+					"Cuadrante":null,
+					"estado":"",
+					"identificador":"",
+					"lat":"             ",
+					"lgt":"             ",
+					"municipio":"",
+					"propietario":"",
+					"usuarioEmergencia":"JUAN RAMON GONZALEZ DIAZ"
+				},
+				"idTicket":"2102100313",
+				"mediosComunicacion":false,
+				"origen":"",
+				"relevante":false,
+				"streaming":null
+		}
+	],
+	"error_code":0,
+	"error_message":"",
+	"result":true,
+	"0":")]}',\\n"
+}
