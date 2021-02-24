@@ -11,7 +11,7 @@ public class Root
 {
     public string api_exception;
     [SerializeField]
-    public List<Data> data;
+    public List<Data> data;// ESTE ES EL CAMPO IMPORTANTE
     public int error_code;
     public string error_message;
     public bool result;
@@ -44,8 +44,24 @@ public class Data
     public object streaming;
     public List<Accion> acciones;
     public List<Red> red;
-
+    public Banda banda;
+    public Bandas bandas;
 }
+
+public class Banda
+{
+    public string nombre;
+    public string lider;
+    public string delitos;
+    public string lugar;
+}
+
+public class Bandas
+{
+    List<Banda> bandas;
+}
+
+
 
 // *** CLASSES FOR PRINCIPAL CLASS *** //
 
@@ -61,7 +77,6 @@ public class Accion
     public int fk_idUsuario;
     public int idcomentario;
     public Direccion direccion;
-
 }
 
 [Serializable]
@@ -176,31 +191,6 @@ public class Direccion
     public string referencias;
 }
 
-//TICKETS
-//TICKETS
-[Serializable]
-public class Ticket_Data:Data
-{
-}
-
-
-[Serializable]
-
-public class CatalogoTickets
-{
-    
-    public List<Data> data;
-}
-
-//IdTICKETS
-
-[Serializable]
-public class CatalogoIdTickets
-{
-    [SerializeField]
-    public List<CatalogoTickets> idTickets;
-}
-
 // *** RED DE VINCULOS *** //
 
 [Serializable]
@@ -276,18 +266,6 @@ public class Sujeto
     public Vehiculo vehiculo;
 }
 
-[Serializable]
-public class Sujetos
-{
-    public List<Sujeto> sujetos;
-}
-
-[Serializable]
-public class CatalogoSujetos
-{
-    public List<Sujeto> catSujetos;
-}
-
 // *** VEHICULOS *** //
 
 [Serializable]
@@ -351,13 +329,7 @@ public class Vehiculo
     public string seriemotor;
     public string serievehiculo;
 }
-[Serializable]
-public class Vehiculos
-{
-    public List<Vehiculo> vehiculos;
-}
-public class CatalogoVehiculos
-{
-    public List<Vehiculos> catVehiculos;
-}
+
+
+
 

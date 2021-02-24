@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.Networking;
 
-
+[Serializable]
 public class JSONReaderBase : MonoBehaviour
 {
     /*

@@ -1,0 +1,308 @@
+ESTRUCTURA GENERAL DEL JSON
+
+La estructura de json esperada es:
+//Raiz
+{
+	"api_exception": "", // el nombre es irrelevante
+	"data": [{}], // campo raiz importante 
+	"error_code": 0, // el nombre es irrelevante
+	"error_message": "", // el nombre es irrelevante
+	"result": true, // el nombre es irrelevante
+	"0": ")]}',\\n" // el nombre es irrelevante
+}
+
+Dónde “data” es el campo importante, es el que extraemos para segmentarlo en classes propias.
+
+Se puede mandar un json con toda la información o tener diferentes json por obtención, la única condición es que los campos tengan el mismo nombre en todas las bases de datos (iph, repuve, etc.)
+
+Ejemplo, si pedimos una acción en particular:
+
+{
+	"data": 
+		[
+			{
+				"Campo de data 1": [{}],
+				"Campo de data 2": [{}],
+				"Campo de data 3": [{}],
+				/*
+				*
+				*
+				*/
+				"Campo de data N": [{}]
+			}
+		] // campo raiz importante 
+		/*
+		*campos raiz omitidos
+		*/
+}
+
+Ejemplo 2, si pedimos un conjunto de acciones:
+
+{
+	"data": 
+	[{
+	
+		"accion 1": 
+		[
+			{
+				"Campo de accion 1": [{}], // lider operativo
+				"Campo de accion 2": [{}], // fecha
+				"Campo de accion 3": [{}]
+			}
+		],
+		"accion 2": 
+		[
+			{
+				"Campo de accion 1": [{}],
+				"Campo de accion 2": [{}],
+				"Campo de accion 3": [{}]
+			}
+		] ,
+		"accion 3": 
+		[
+			{
+				"Campo de accion 1": [{}],
+				"Campo de accion 2": [{}],
+				"Campo de accion 3": [{}]
+			}
+		] 
+	
+	}]		// campo raiz importante 
+		/*
+		*campos raiz omitidos
+		*/
+}
+
+Ejemplo 3, si pedimos un ticket:
+{
+	"api_exception": "", // el nombre es irrelevante
+	"data":  // campo raiz importante 
+	[
+		{// Los campos dentro de data es la información de la busqueda 
+			"N-campo 1": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+			[
+				{
+					"N-subcampo 1":  
+					[
+						{
+							"N-subsubcampo 1":,
+							"N-subsubcampo 2":,
+							"N-subsubcampo 3":,
+									/*
+									*
+									*
+									*/
+							"N-subsubcampo n": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+						}
+					],
+					"N-subcampo 2": ,
+					"N-subcampo 3": ,
+							/*
+							*
+							*
+							*/
+					"N-subcampo n": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+				}
+			],
+			"N-campo 2":,
+			"N-campo 3":,
+				/*
+				*
+				*
+				*/
+			"N-campo n": // // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+		}
+	],
+	"error_code": 0, // el nombre es irrelevante
+	"error_message": "", // el nombre es irrelevante
+	"result": true, // el nombre es irrelevante
+	"0": ")]}',\\n" // el nombre es irrelevante
+}
+
+ESTRUCTURA PARA RED DE VINCULOS
+
+El modelo contemplado para contruir la red de vínculos es de jerarquía donde el nodo más externo es el campo más interno del json y el nodo más interno, hasta llegar al núcleo, es el campo más externo del json.
+De este modo se puede presenrvar la estructura anterior sin necesidad de determinar EDGES, la conexión se realizará por la propia jerarquía del json.
+//Raiz
+{
+	"api_exception": "", // el nombre es irrelevante
+	"data":  // campo raiz importante 
+	[
+		{// Los campos dentro de data es la información de la busqueda 
+			"N-campo 1": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+			[
+				{
+					"N-subcampo 1":  
+					[
+						{
+							"N-subsubcampo 1":,
+							"N-subsubcampo 2":,
+							"N-subsubcampo 3":,
+									/*
+									*
+									*
+									*/
+							"N-subsubcampo n": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+						}
+					],
+					"N-subcampo 2": ,
+					"N-subcampo 3": ,
+							/*
+							*
+							*
+							*/
+					"N-subcampo n": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+				}
+			],
+			"N-campo 2":,
+			"N-campo 3":,
+				/*
+				*
+				*
+				*/
+			"N-campo n": // // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+		}
+	],
+	"error_code": 0, // el nombre es irrelevante
+	"error_message": "", // el nombre es irrelevante
+	"result": true, // el nombre es irrelevante
+	"0": ")]}',\\n" // el nombre es irrelevante
+}
+
+
+//EJEMPLO, la busqueda de José Valenciano arrojaría algo así
+	{
+	"api": "", // el nombre es irrelevante
+	"data":  // campo raiz importante 
+		[
+			{// Los campos dentro de data es la información de la busqueda
+				"sujetos relacionados":  
+				[
+					{
+						"nombre": "Jorge Perez 4",
+						"direccion":
+							[
+								{
+								 "campos de direccion": valorDireccion;
+								}
+							],
+						"idTicket": 0001,
+						"campo n": valorN
+					},
+					{
+						"nombre": "Carlos Espinoza 2",
+						"direccion":
+							[
+								{
+								 "campos de direccion": valorDireccion;
+								}
+							],
+						"idTicket": 5126,
+						"campo n": valorN
+					}
+				],
+				"vehiculos relacionados":  
+				[
+					{
+						"marca": "Mazda",
+						"modelo": "CX-3",
+						"direccion":
+							[
+								{
+								 "campos de direccion": valorDireccion;
+								}
+							],
+						"idTicket": 0001,
+						"campo n": valorN,
+					},
+					{
+						"marca": "Audi",
+						"modelo": "A5",
+						"direccion":
+							[
+								{
+								 "campos de direccion": valorDireccion;
+								}
+							],
+						"idTicket": 0001,
+						"campo n": valorN,
+					}
+				]
+			}
+		]
+	}
+
+
+	//EJEMPLO, la busqueda de José Valenciano y Jaguar F-Type arrojaría algo así
+	{
+	"api_exception": "", // el nombre es irrelevante
+	"data":  // campo raiz importante 
+		[
+			{// Los campos dentro de data es la información de la busqueda 
+				"Resultado Busqueda Nombre": // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+				[
+					{
+					"sujetos relacionados":  
+					[
+						{
+							"nombre": "Jorge Perez 4",
+							"direccion":
+								[
+									{
+									 "campos de direccion": valorDireccion;
+									}
+								],
+							"idTicket": 0001,
+							"campo n": valorN
+						},
+						{
+							"nombre": "Carlos Espinoza 2",
+							"direccion":
+								[
+									{
+									 "campos de direccion": valorDireccion;
+									}
+								],
+							"idTicket": 5126,
+							"campo n": valorN
+						}
+					],
+					"vehiculos relacionados":  
+					[
+						{
+							"marca": "Mazda",
+							"modelo": "CX-3",
+							"direccion":
+								[
+									{
+									 "campos de direccion": valorDireccion;
+									}
+								],
+							"idTicket": 0001,
+							"campo n": valorN,
+						},
+						{
+							"marca": "Audi",
+							"modelo": "A5",
+							"direccion":
+								[
+									{
+									 "campos de direccion": valorDireccion;
+									}
+								],
+							"idTicket": 0001,
+							"campo n": valorN,
+						}
+					]
+					}
+				],
+				"Resultado Busqueda Automovil":,
+				"Resultado Busqueda Mediafiliacion":,
+				/*
+				*
+				*
+				*/
+				"N Resultado de busqueda": // // el nombre de los campos es irrelevante pero debe ser el mismo en todas las bases de datos (iph, repuve, etc)
+			}
+		]
+	}

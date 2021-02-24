@@ -11,7 +11,7 @@ public class ToogleActive : MonoBehaviour
         status = objToToggle.activeSelf;
     }
 
-    void ToggleState()
+    public void ToggleState()
     {
         status = !status;
         objToToggle.SetActive(status);

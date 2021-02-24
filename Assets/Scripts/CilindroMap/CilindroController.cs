@@ -25,13 +25,13 @@ public class CilindroController : MonoBehaviour
 
                 if (hitObject != null && hitObject == obj)
                 {
-                    bak.RayStay(hitObject);
+                    bak.RayStay();
                 }
                 else
                 {
                     //bak.RayExit(hitObject);
                     hitObject = obj;
-                    bak.RayEnter(hitObject);
+                    bak.RayEnter();
                 }
             }
 
@@ -40,7 +40,7 @@ public class CilindroController : MonoBehaviour
         {
             if (hitObject != null)
             {
-                hitObject.GetComponent<Usable>().RayExit(hitObject);
+                hitObject.GetComponent<Usable>().RayExit();
                 hitObject = null;
             }
         }
