@@ -10,6 +10,7 @@ public class NodeConnection : MonoBehaviour
     public int prevQtyChildren;
     public int actualQtyChildren;
     public Transform[] childrenNodes; // nodos hijos
+    public int angle;
     private Vector3 coreNodeLocalPosition;
 
     private NodeEdge nodeEdge;
@@ -17,6 +18,7 @@ public class NodeConnection : MonoBehaviour
     void Start()
     {
         prevQtyChildren = actualQtyChildren = 0;
+       
     }
 
 
@@ -25,18 +27,22 @@ public class NodeConnection : MonoBehaviour
     {
         
         actualQtyChildren = childrenNodesParent.childCount; // se lee la cantidad de hijos (nodos) en el padre de los nodos
-        
         if (actualQtyChildren > prevQtyChildren) // si hay más nodos
         {
+            angle = 359 / actualQtyChildren;
             childrenNodes = new Transform[actualQtyChildren]; // se limpia la lista de nodos creando una nueva con un tamaño igual a la cantidad de nodos
             var idx = 0; // se inicializa el contador con 0;
+            
             foreach (Transform item in childrenNodes) // para cada nodo en la lista de nodos
             {
+                
                 childrenNodes[idx] = childrenNodesParent.GetChild(idx).GetChild(0);
                 /* 
                  * el nodo con indice idx de la lista será el primer hijo (GetChild(0)) de cada nodo (GetChild(idx))
                  * del padre de nodos o contenedor de nodos (childrenNodesParent)
                  */
+
+                childrenNodes[idx].localPosition = posicion((idx)*angle);
                 nodeEdge = childrenNodes[idx].GetComponent<NodeEdge>();
                 nodeEdge.NodeToAttatch = coreNode;
 
@@ -55,6 +61,16 @@ public class NodeConnection : MonoBehaviour
             prevQtyChildren = actualQtyChildren;
         }
         
+    }
+    public Vector3 posicion(float degSeparation)
+    {
+
+        Vector3 pos = new Vector3();
+        pos.x = 2 * Mathf.Sin(degSeparation);
+        pos.y = 2 * Mathf.Cos(degSeparation);
+        pos.z = 1;
+        Debug.Log(degSeparation+"---" +pos);
+        return pos;
     }
 
 }

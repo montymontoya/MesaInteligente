@@ -28,7 +28,7 @@ public class managerInfoTimeline : JSONReaderBase
      
         if (texto != null)
         {
-            LocalJSONRead(texto.text);
+            //LocalJSONRead(texto.text);
         }
 
         StartCoroutine(Whilee());

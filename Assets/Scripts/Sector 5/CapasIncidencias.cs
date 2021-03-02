@@ -48,7 +48,7 @@ public class CapasIncidencias : JSONReaderBase
     {
         texto = new TextAsset(localPath);
         markers = new List<GameObject>();
-        LocalJSONRead(texto.text);
+    //    LocalJSONRead(texto.text);
         StartCoroutine(Whilee());
     }
 
@@ -56,7 +56,7 @@ public class CapasIncidencias : JSONReaderBase
     {
         texto = new TextAsset(remotePath);
         markers = new List<GameObject>();
-        URLJSONRead(texto.text);
+    //    URLJSONRead(texto.text);
         StartCoroutine(Whilee());
     }
 

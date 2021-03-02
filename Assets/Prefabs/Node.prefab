@@ -387,12 +387,12 @@ MonoBehaviour:
   edge: {fileID: 8192554292732079365}
   NodeToAttatch: {fileID: 0}
   nodeParent: {fileID: 1914682363278927141}
-  vertexCount: 10
+  vertexCount: 50
   deformCoef: 1
   p0: {x: 0, y: 0, z: 0}
   p1: {x: 0, y: 0, z: 0}
   p2: {x: 0, y: 0, z: 0}
-  opcion: 7
+  p3: {x: 0, y: 0, z: 0}
 --- !u!114 &8991812428277017631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +411,7 @@ MonoBehaviour:
   prevQtyChildren: 0
   actualQtyChildren: 0
   childrenNodes: []
+  angle: 0
 --- !u!114 &2189011937829724439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +743,10 @@ PrefabInstance:
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
+      propertyPath: m_Parameters.colorGradient.atime0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.size

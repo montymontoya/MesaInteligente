@@ -8,8 +8,7 @@ public class CapasSucesion : JSONReaderBase
 {
     #region variables propias de base
     public List<dataType> listData; // se declara una variable para guardar los datos
-    public bool isReady = false; // esta bandera sirve de apoyo para indicarle al sistema hasta cuando dejar de ejecutarse.
-    public bool listReady; // esta bandera sirve de apoyo para saber en qué momento ya existen datos
+
     public bool start, whilee,getData, setData;
 
     public TextAsset texto;
@@ -37,18 +36,18 @@ public class CapasSucesion : JSONReaderBase
         //map = manager.GetComponent<OnlineMaps>();
         if (texto != null)
         {
-            LocalJSONRead(texto.text);
+        //    LocalJSONRead(texto.text);
         }
         StartCoroutine(Whilee());
     }
     #endregion
 
-
+    /*
     public void InitLocalPath(string localPath)
     {
         texto = new TextAsset(localPath);
         markers = new List<GameObject>();
-        LocalJSONRead(texto.text);
+        //LocalJSONRead(texto.text);
         StartCoroutine(Whilee());
     }
 
@@ -56,10 +55,10 @@ public class CapasSucesion : JSONReaderBase
     {
         texto = new TextAsset(remotePath);
         markers = new List<GameObject>();
-        URLJSONRead(texto.text);
+        //URLJSONRead(texto.text);
         StartCoroutine(Whilee());
     }
-
+    */
     private IEnumerator Whilee()
     {
         while (!isReady) // si aún no se realiza la función con los datos
@@ -68,7 +67,7 @@ public class CapasSucesion : JSONReaderBase
 
             if (listReady) // si existen los datos
             {
-                listData = GetDataFrom(jsonData);
+                //listData = GetDataFrom(jsonData);
                 SetDataWith(listData);  // se ejecuta la función de llenado de datos
                 isReady = true; // se activa la bandera para indicar que ya terminó su función
                 
@@ -77,6 +76,7 @@ public class CapasSucesion : JSONReaderBase
         whilee = true;
         yield return 0;
     }
+    /*
     public List<dataType> GetDataFrom(List<Data> jData)
     {
         
@@ -102,7 +102,7 @@ public class CapasSucesion : JSONReaderBase
         getData = true;
         return listData;
     }
-
+    */
     public void SetDataWith(List<dataType> data) // PONER AQUI LO QUE SE QUIERE HACER con los datos
     {
 

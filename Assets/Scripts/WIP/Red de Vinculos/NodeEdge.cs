@@ -11,52 +11,17 @@ public class NodeEdge : MonoBehaviour
     public int vertexCount = 100;
 
     public float deformCoef = 1;
-    public Vector3 p0, p1, p2;
+    public Vector3 p0, p1, p2, p3;
     private Vector3[] pointList;
     private Vector2 signos;
 
-    public enum BD
-    {
-        iph_w, reclusorios, mp, repuve, plat_mexico, n_informativo, iph_m, otra
-    }
-    public BD opcion = BD.otra;
-
-    private void Start()
-    {
-        ChangeLineColor(opcion);
-    }
     // Start is called before the first frame update
-   public void ChangeLineColor(BD opc)
+    public void ChangeLineColor(Color c1, Color c2)
     {
-        switch (opc)
-        {
-            case BD.iph_w:
-                edge.startColor = Color.blue;
-                edge.endColor = edge.startColor;
-                break;
-            case BD.reclusorios:
-                edge.startColor = Color.red;
-                break;
-            case BD.mp:
-                edge.startColor = Color.magenta;
-                break;
-            case BD.repuve:
-                edge.startColor = Color.gray;
-                break;
-            case BD.plat_mexico:
-                edge.startColor = Color.green;
-                break;
-            case BD.n_informativo:
-                edge.startColor = Color.white;
-                break;
-            case BD.iph_m:
-                edge.startColor = Color.yellow;
-                break;
-            case BD.otra:
-                edge.startColor = Color.cyan;
-                break;
-        }
-        edge.endColor = edge.startColor;
+
+        edge.startColor = c1;
+        edge.endColor = c2;
+
     }
 
     // Update is called once per frame
@@ -71,11 +36,14 @@ public class NodeEdge : MonoBehaviour
             {
                 p0 = nodeParent.InverseTransformPoint(NodeToAttatch.position);
                 p2 = this.transform.localPosition;
-                p1 = (p0 + p2)/2;
+                p1 = (p0 + p2)/4;
+                p3 = p1 * 3;
                 signos.y = Mathf.Sign(p0.y + p2.y);
                 p1.y = signos.y *  Mathf.Abs(p0.y-p2.y);
                 float t = idx / (float)vertexCount;
-                pointList[idx] = CalculateLerpCurve(t, p0, p1, p2);
+                //                pointList[idx] = CalculateLerpCurve(t, p0, p1, p2);
+                //                pointList[idx] = CalculateQuadraticCurve(t, p0, p1, p2);
+                pointList[idx] = GetBezierPoint(t, p0, p1, p2,p3);
                 idx++;
             }
             edge.SetPositions(pointList);
@@ -97,5 +65,30 @@ public class NodeEdge : MonoBehaviour
         var line2 = Vector3.Lerp(p1, p2, t);
         var bezier = Vector3.Lerp(line1, line2, t);
         return bezier;
+    }
+
+    public Vector3 GetBezierPoint(float t, Vector3 p1, Vector3 c1, Vector3 p2, Vector3 c2, int derivative = 0)//(t,p0,p1,p3,p2)
+    {
+        derivative = Mathf.Clamp(derivative, 0, 2);
+        float u = (1f - t);
+        if (derivative == 0)
+        {
+            return u * u * u * p1 + 3f * u * u * t * c1 + 3f * u * t * t * c2 + t * t * t * p2;
+
+        }
+        else if (derivative == 1)
+        {
+            return 3f * u * u * (c1 - p1) + 6f * u * t * (c2 - c1) + 3f * t * t * (p2 - c2);
+
+        }
+        else if (derivative == 2)
+        {
+            return 6f * u * (c2 - 2f * c1 + p1) + 6f * t * (p2 - 2f * c2 + c1);
+
+        }
+        else
+        {
+            return Vector3.zero;
+        }
     }
 }

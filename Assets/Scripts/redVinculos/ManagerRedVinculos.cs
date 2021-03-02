@@ -15,7 +15,7 @@ public class ManagerRedVinculos : JSONReaderBase
     {
         if (texto != null)
         {
-            LocalJSONRead(texto.text);
+           // LocalJSONRead(texto.text);
         }
     }
    

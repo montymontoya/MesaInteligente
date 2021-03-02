@@ -34,35 +34,74 @@ public class JSONReaderBase : MonoBehaviour
     public string URL;
     [Header("Catálogo de Tickets resultate/Debug")]
     */
+
+    [Header("TEST JSON READER")]
+
+    public bool isReady = false; // esta bandera sirve de apoyo para indicarle al sistema hasta cuando dejar de ejecutarse.
+    public bool listReady; // esta bandera sirve de apoyo para saber en qué momento ya existen datos
+    public TextAsset texto;
     public List<Data> jsonData;
 
-    public void LocalJSONRead(string jsonText)
+    public void InitLocalPath(string localPath)
     {
-        jsonData.Clear();
-        StartCoroutine(GetLocalJsonData(jsonText));
+        StartCoroutine(GetLocalJsonData(localPath));
+
     }
 
     IEnumerator GetLocalJsonData(string jsonText)
     {
         jsonData = JsonUtility.FromJson<Root>(jsonText).data;
+        StartCoroutine(Whilee());
         yield return 0;
     }
 
-    public void URLJSONRead(string URL, string authHeader = "")
+    public void InitRemotePath(string remotePath)
     {
-        jsonData.Clear();
-        StartCoroutine(GetTickets(URL, authHeader));
+        StartCoroutine(GetRemoteJsonData(remotePath, ""));
+
     }
 
-    IEnumerator GetTickets(string URL, string authHeader ="")
+    IEnumerator GetRemoteJsonData(string URL, string authHeader = "")
     {
+        //Debug.Log("GET REMOTE DATA");
         UnityWebRequest www = UnityWebRequest.Get(URL);
         www.SetRequestHeader("Authorization", authHeader);
         yield return www.SendWebRequest();
-        jsonData = JsonUtility.FromJson<Root>(www.downloadHandler.text).data;
+        if (www.isNetworkError)
+        {
+            //Debug.Log(www.error);
+            jsonData = JsonUtility.FromJson<Root>(texto.text).data;
+            StartCoroutine(Whilee());
+        }
+        else
+        {
+            jsonData = JsonUtility.FromJson<Root>(www.downloadHandler.text).data;
+            StartCoroutine(Whilee());
+        }
+    }
+
+    private IEnumerator Whilee()
+    {
+        //Debug.Log("Whilee");
+        while (!isReady) // si aún no se realiza la función con los datos
+        {
+            if (jsonData != null)
+                listReady = (jsonData.Count) > 0 ? true : false; // se pregunta si existen los datos
+
+            
+            if (listReady) // si existen los datos
+                SetDataFrom(jsonData);
+        }
+        yield return 0;
+    }
+
+    public virtual void SetDataFrom(List<Data> jData)
+    {
+
     }
 
 }
+
 
 
 

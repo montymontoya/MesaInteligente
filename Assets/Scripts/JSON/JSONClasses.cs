@@ -43,9 +43,17 @@ public class Data
     public bool relevante;
     public object streaming;
     public List<Accion> acciones;
-    public List<Red> red;
     public Banda banda;
     public Bandas bandas;
+    public Sujeto sujeto;
+    public Sujetos sujetos;
+
+    /*+++++++++++++++++*/
+    public DatosGenerales datosGenerales;
+    public MediaFiliacion mediafiliacion;
+    public Multimedia multimedia;
+    public UbicacionesProbables ubicacionesProbables;
+    public HistorialDelictivo historialDelictivo;
 }
 
 public class Banda
@@ -89,21 +97,6 @@ public class Acciones
 
 // *** ¿? *** //
 
-[Serializable]
-public class Identificacion
-{
-    public string calle;
-    public string colonia;
-    public string cp;
-    public object Cuadrante;
-    public string estado;
-    public string identificador;
-    public string lat;
-    public string lgt;
-    public string municipio;
-    public string propietario;
-    public string usuarioEmergencia;
-}
 
 [Serializable]
 public class CatDenuncia
@@ -219,12 +212,13 @@ public class Red
 
 
 // *** SUJETOS *** //
+[Serializable]
 public class CatRasgo
 {
     public int id;
     public string title;
 }
-
+[Serializable]
 public class CatMediafiliacion
 {
     public CatRasgo catRasgo;
@@ -232,7 +226,7 @@ public class CatMediafiliacion
     public int id;
     public string nombre;
 }
-
+[Serializable]
 public class Mediafiliacion
 {
     public CatMediafiliacion Cat_mediafiliacion;
@@ -264,6 +258,12 @@ public class Sujeto
     public string nombre;
     public string rasgosdist;
     public Vehiculo vehiculo;
+
+}
+[Serializable]
+public class Sujetos
+{
+    public List<Sujeto> sujetos;
 }
 
 // *** VEHICULOS *** //
