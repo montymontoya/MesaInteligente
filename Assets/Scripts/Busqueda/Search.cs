@@ -15,6 +15,7 @@ public class Search : MonoBehaviour
     public GameObject[] inputContainerParent; // GameObject padre de un TMP_InputField
     public TMP_InputField[] inputFields; //Componente TMP_InputField
 
+    public bool useAllBDPaths = false;
     public GameObject[] DBPaths; // GameObject que contiene una componente SimpleText
     public List<SearchOn> dondeBuscar;
 
@@ -28,16 +29,21 @@ public class Search : MonoBehaviour
     //ESTE MÉTODO SIRVE PARA BUSCAR UNO POR UNO
     public void SearchNow()
     {
+        SearchWithThisData(DBPaths,inputFields);
+    }
+
+    public void SearchWithThisData(GameObject[] DBPaths_,TMP_InputField[] inputFields_)
+    {
         dondeBuscar = new List<SearchOn>();
         jdx = 0;
         //foreach (var DBPath in DBPaths)
-        for (int i = 0; i < DBPaths.Length; i++)
+        foreach (var db in DBPaths_)
         {
-            if (DBPaths[i].activeSelf)
+            if (DBPaths[jdx].activeSelf || useAllBDPaths)
             {
-                var DBPathText = DBPaths[i].GetComponent<SimpleText>().Text;
+                var DBPathText = DBPaths_[jdx].GetComponent<SimpleText>().Text;
                 temp = new List<string>(); idx = 0;
-                foreach (var input in inputFields)
+                foreach (var input in inputFields_)
                 {
                     if (inputContainerParent[idx].activeSelf)
                     {
@@ -49,9 +55,27 @@ public class Search : MonoBehaviour
             }
             jdx++;
         }
+        if (dondeBuscar.Count>0)
+        {
+            if (dondeBuscar[0].buscarEsto.Count>0)
+            {
+                manager.SetData(dondeBuscar);
+            }
+            else
+            {
+                Debug.Log("Escriba algun parametro");
+            }
 
-        manager.SetData(dondeBuscar);
+        }
+        else
+        {
+            Debug.Log("Seleccione alguna base de datos");
+        }
+
     }
+
+
+
 
          //ESTE MÉTODO SIRVE PARA BUSCAR TODO JUNTO
     /*public void SearchNow()

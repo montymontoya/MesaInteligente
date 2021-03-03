@@ -7,7 +7,7 @@ public class ClickCounter : MonoBehaviour
     public int button;
     public int ClickUp, ClickDown;
     private bool Status;
-    private float t,ts, thTime = 0.3f;
+    private float t,ts, thTime = 0.2f;
     private bool stay;
     public bool debug;
     public int clicStatus, clcStatus;
@@ -100,7 +100,8 @@ public class ClickCounter : MonoBehaviour
         }
         else if(ClickDown > 2 || ClickUp > 2)
         {
-            clcStatus = ClickDown = ClickUp = 0;
+            ClickDown = 1;
+            clcStatus = ClickUp = 0;
             clcD = clcU = true;
             ts = t = 0;
             stay = false;
