@@ -101,8 +101,8 @@ public class CapasIncidencias : JSONReaderBase
         foreach (dataType incidencia in data)
         {
             
-            double lng = Convert.ToDouble(incidencia.direccion.lgt);
-            double lat = Convert.ToDouble(incidencia.direccion.lat);
+            double lng = Convert.ToDouble(incidencia.direccion.longitud);
+            double lat = Convert.ToDouble(incidencia.direccion.latitud);
             // Create a new marker.
             mark3D = manager.Create(lng, lat, markerPrefab);
             mark3D.label = incidencia.tipo;

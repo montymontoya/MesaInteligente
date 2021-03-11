@@ -22,6 +22,9 @@ public class Root
 [Serializable]
 public class Data
 {
+    /****General*****/
+    public string id;
+
     public CatDelito CatDelito;
     public CatEstatus CatEstatus;
     public CatPrioridad CatPrioridad;
@@ -42,33 +45,45 @@ public class Data
     public string origen;
     public bool relevante;
     public object streaming;
-    public List<Accion> acciones;
-    public Banda banda;
-    public Bandas bandas;
-    public Sujeto sujeto;
-    public Sujetos sujetos;
 
     /*+++++++++++++++++*/
+
+    public List<Accion> acciones;
+    public Banda banda;
+    public List<Banda> bandas;
+    public Sujeto sujeto;
+    public List<Sujeto> sujetos;
+
+   
+   
     public DatosGenerales datosGenerales;
     public MediaFiliacion mediafiliacion;
     public Multimedia multimedia;
-    public UbicacionesProbables ubicacionesProbables;
-    public HistorialDelictivo historialDelictivo;
-}
+    public List<Direccion> ubicacionesProbables;
+    public List<Delito> historialDelictivo;
+    public List<Vinculo> vinculos;
 
-public class Banda
-{
+    /*+++++++ Para Perfil o Sujeto +++++++*/
+    public Perfil perfil;
+
     public string nombre;
-    public string lider;
-    public string delitos;
-    public string lugar;
-}
+    public string alias;
 
-public class Bandas
-{
-    List<Banda> bandas;
-}
+    public string sexo;
+    public string edad;
+    public string nivelDeActividad;
+    public string nivelDePeligrosidad;
+    public string foto;
+    /********* Para Arma ***********/
 
+    public Arma arma;
+
+    /********* Para Caso ***********/
+    public Caso caso;
+
+    /********* Para Vehiculo ***********/
+    public Vehiculo vehiculo;
+}
 
 
 // *** CLASSES FOR PRINCIPAL CLASS *** //
@@ -167,6 +182,7 @@ public class CatMunicipio
     public int id;
     public string nombre;
 }
+/*-
 [Serializable]
 public class Direccion
 {
@@ -183,7 +199,7 @@ public class Direccion
     public string lgt;
     public string referencias;
 }
-
+*/
 // *** RED DE VINCULOS *** //
 
 [Serializable]
@@ -236,35 +252,7 @@ public class Mediafiliacion
     public int idSujetoMediafiliacion;
 }
 
-[Serializable]
-public class Sujeto
-{
-    public string alias;
-    public string apellidoMaterno;
-    public string apellidoPaterno;
-    public bool clasificacion;
-    public string detencion;
-    public Direccion direccion;
-    public DateTime fecha;
-    public object fechadetencion;
-    public int fk_idDireccion;
-    public int fk_idObjetivo;
-    public string fk_idTicket;
-    public int fk_idVehiculo;
-    public string foto;
-    public int idSujeto;
-    public bool isObjetivo;
-    public List<Mediafiliacion> mediafiliacion;
-    public string nombre;
-    public string rasgosdist;
-    public Vehiculo vehiculo;
 
-}
-[Serializable]
-public class Sujetos
-{
-    public List<Sujeto> sujetos;
-}
 
 // *** VEHICULOS *** //
 

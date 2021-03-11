@@ -13,13 +13,13 @@ public class JSONReaderBandas : MonoBehaviour
 
     public GameObject[] cells = new GameObject[10];
 
-    public Bandas bandasInJson;
+    public List<Banda> bandasInJson;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        bandasInJson = JsonUtility.FromJson<Bandas>(jsonFile.text);
+        //bandasInJson = new listJsonUtility.FromJson<Banda>(jsonFile.text);
 
         foreach (GameObject item in cells)
         {

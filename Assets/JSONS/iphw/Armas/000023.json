@@ -1,0 +1,18 @@
+{
+  "data": [{
+    "id": "000023",
+    "datosGenerales": {
+      "tipo": "",
+      "marca": "",
+      "modelo": "",
+      "calibre": "",
+      "registro": "8505"
+    },
+    "vinculos": [
+      {
+        "nombre": " Luis Garcia Lopez",
+        "id": "000004"
+      }
+    ]
+  }]
+}

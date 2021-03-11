@@ -17,6 +17,7 @@ public class Search : MonoBehaviour
 
     public bool useAllBDPaths = false;
     public GameObject[] DBPaths; // GameObject que contiene una componente SimpleText
+    public string[] param;
     public List<SearchOn> dondeBuscar;
 
     private List<string> temp;
@@ -47,7 +48,7 @@ public class Search : MonoBehaviour
                 {
                     if (inputContainerParent[idx].activeSelf)
                     {
-                        temp.Add(DBPathText + "/" + input.text);
+                        temp.Add(DBPathText + "/" +param[idx] +"/"+ input.text + ".json");
                     }
                     idx++;
                 }

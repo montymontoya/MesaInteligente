@@ -7,7 +7,7 @@ public class ClickCounter : MonoBehaviour
     public int button;
     public int ClickUp, ClickDown;
     private bool Status;
-    private float t,ts, thTime = 0.2f;
+    private float t,ts, thTime = 0.3f;
     private bool stay;
     public bool debug;
     public int clicStatus, clcStatus;
@@ -61,7 +61,7 @@ public class ClickCounter : MonoBehaviour
             else
             {
                 t += Time.deltaTime;
-                if (t > thTime)
+                if (t > thTime*.5)
                 {
                     if (debug) { Debug.Log("UN CLIC"); }
                     clicStatus = 1;

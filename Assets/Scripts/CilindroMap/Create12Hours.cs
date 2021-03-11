@@ -50,8 +50,8 @@ public class Create12Hours : MonoBehaviour
                     //map.GetComponent<OnlineMaps>().position = new Vector2(19.03793f, -98.20346f);
                     //string label = "Marker Analitica id: " + item.identificacion + "\n" + (item.descripcion);
 
-                    double lng = Convert.ToDouble(item.direccion.lgt);
-                    double lat = Convert.ToDouble(item.direccion.lat);
+                    double lng = Convert.ToDouble(item.direccion.longitud);
+                    double lat = Convert.ToDouble(item.direccion.latitud);
 
                     // Create a new marker.
                     mark3D = OnlineMapsMarker3DManager.CreateItem(lng, lat, markerPrefab);

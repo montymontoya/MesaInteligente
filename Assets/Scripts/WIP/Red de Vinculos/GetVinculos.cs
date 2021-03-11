@@ -14,45 +14,90 @@ public class GetVinculos : JSONReaderBase
 
     public Color32   color;
 
+    public List<Data> jDatas;
     [Header("Variables generales jsonReaderBase")]
     public List<dataType> drawData; // se declara una variable para guardar los datos
 
     public override void SetDataFrom(List<Data> jData)
     {
+        jDatas = jData;
         drawData = new List<dataType>();
         foreach (var data in jData)
         {
+            rellena(data);
+            /*
             drawData.Add(
                 new dataType
                 {
-
-                    datosGenerales = data.datosGenerales,
-                    mediafiliacion = data.mediafiliacion,
-                    multimedia = data.multimedia,
-                    ubicacionesProbables = data.ubicacionesProbables,
-                    historialDelictivo = data.historialDelictivo
-
+                    sujeto = data.sujeto,
+                    banda = data.banda,
+                    caso = data.caso,
+                    arma = data.arma,
+                    vehiculo = data.vehiculo
                 }
-                );
+                );*/
         }
         foreach (dataType value in drawData)
         {
+            /*Node Creation and Transform Setting*/
             var nodo = Instantiate<GameObject>(node);
             nodo.transform.parent = nodeParent;
             nodo.transform.localScale = new Vector3(50, 50, 50);
+            /* Edge Connection*/
+            var edge = nodo.transform.GetChild(0).GetComponent<NodeEdge>();
+            edge.ChangeLineColor(color, color);
+            /* Data Setting */
+            var data = nodo.transform.GetChild(0).GetComponent<NodeData>();
+            data.data = value;
+
             
-            nodo.transform.GetChild(0).GetComponent<NodeEdge>().ChangeLineColor(color, color);
-
-
-            //node.transform.localPosition = 
-            /*Agregar aquí lo que se desea hacer con la lista recien formada
-             Ejemplo:
-            double lng = Convert.ToDouble(value.direccion.lgt);
-            double lat = Convert.ToDouble(value.direccion.lat);
-            */
         }
         isReady = true; // se activa la bandera para indicar que ya terminó su función
     }
 
+    void rellena(Data data)
+    {
+        var sujeto = new Sujeto();
+        var banda = new Banda();
+        var caso = new Caso();
+        var arma = new Arma();
+        var vehiculo = new Vehiculo();
+
+        if (data.sujeto.id != null)
+        {
+            sujeto = data.sujeto;
+        }
+        else
+        {
+            sujeto = new Sujeto
+            {
+                datosGenerales = data.datosGenerales,
+                id = data.id
+            };
+        }
+        if (data.arma.id != null)
+        {
+            arma = data.arma;
+        }
+        else
+        {
+            arma = new Arma
+            {
+                datosGenerales = data.datosGenerales,
+                id = data.id
+            };
+        }
+
+        drawData.Add(
+                new dataType
+                {
+                    sujeto = sujeto,
+                    banda = banda,
+                    caso = caso,
+                    arma = arma,
+                    vehiculo = vehiculo
+                }
+                );
+    }
 }
 

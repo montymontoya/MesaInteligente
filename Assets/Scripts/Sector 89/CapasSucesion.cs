@@ -109,8 +109,8 @@ public class CapasSucesion : JSONReaderBase
         foreach (dataType item in data)
         {
             
-            double lng = Convert.ToDouble(item.direccion.lgt);
-            double lat = Convert.ToDouble(item.direccion.lat);
+            double lng = Convert.ToDouble(item.direccion.longitud);
+            double lat = Convert.ToDouble(item.direccion.latitud);
             // Create a new marker.
             mark3D = manager.Create(lng, lat, markerPrefab);
             mark3D.label = item.comentario;

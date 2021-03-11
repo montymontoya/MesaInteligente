@@ -39,7 +39,7 @@ public class JSONReaderBase : MonoBehaviour
 
     public bool isReady = false; // esta bandera sirve de apoyo para indicarle al sistema hasta cuando dejar de ejecutarse.
     public bool listReady; // esta bandera sirve de apoyo para saber en qué momento ya existen datos
-    public TextAsset texto;
+    public string texto;
     public List<Data> jsonData;
 
     public void InitLocalPath(string localPath)
@@ -57,6 +57,8 @@ public class JSONReaderBase : MonoBehaviour
 
     public void InitRemotePath(string remotePath)
     {
+        texto = "";
+        jsonData = new List<Data>();
         StartCoroutine(GetRemoteJsonData(remotePath, ""));
 
     }
@@ -70,13 +72,20 @@ public class JSONReaderBase : MonoBehaviour
         if (www.isNetworkError)
         {
             //Debug.Log(www.error);
-            jsonData = JsonUtility.FromJson<Root>(texto.text).data;
-            StartCoroutine(Whilee());
+            //jsonData = JsonUtility.FromJson<Root>(texto.text).data;
+            //StartCoroutine(Whilee());
         }
         else
         {
-            jsonData = JsonUtility.FromJson<Root>(www.downloadHandler.text).data;
-            StartCoroutine(Whilee());
+            texto = www.downloadHandler.text;
+            Debug.Log(texto.Length);
+            if (texto.Length>1)
+            {
+                var json = JsonUtility.FromJson<Root>(texto);
+                jsonData = json.data;
+                StartCoroutine(Whilee());
+            }
+            
         }
     }
 
