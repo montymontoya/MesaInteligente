@@ -58,7 +58,7 @@ public class managerInfoTimeline : JSONReaderBase
     public List<dataType> GetDataFrom(List<Data> jData)
     {
         List<dataType> listData = new List<dataType>();
-
+/*
         foreach (var item in jsonData)
         {
             foreach (var accion in item.acciones)
@@ -70,7 +70,7 @@ public class managerInfoTimeline : JSONReaderBase
                     }
                 );
             }
-        }
+        }*/
         return listData;
     }
 

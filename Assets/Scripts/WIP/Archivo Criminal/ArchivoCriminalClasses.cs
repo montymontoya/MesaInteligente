@@ -5,5 +5,5 @@ using System;
 [Serializable]
 public class Perfil : DatosGenerales
 {
-    public string foto;
+    public Multimedia multimedia;
 }

@@ -4,23 +4,32 @@ using UnityEngine;
 
 public class SetNiveles : MonoBehaviour
 {
-    public Transform[] niveles;
+    public GameObject nivelesParent;
+    public GameObject[] niveles;
     private void Start()
     {
-        niveles = GetComponentsInChildren<Transform>();
+        var size = transform.childCount;
+        var i = 0;
+        
+        foreach (var item in niveles)
+        {
+            niveles[i] = nivelesParent.transform.GetChild(i).gameObject;
+            i++;
+        }
 
     }
     public void SetLevel(int lvl)
     {
+        
         int idx = 0;
         foreach (var nivel in niveles)
         {
             if (nivel != transform)
             {
                 if (idx < lvl)
-                    nivel.gameObject.SetActive(true);
+                    nivel.SetActive(true);
                 else
-                    nivel.gameObject.SetActive(false);
+                    nivel.SetActive(false);
             }
 
             idx++;

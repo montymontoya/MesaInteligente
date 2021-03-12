@@ -7,6 +7,8 @@ using System;
 using UnityEngine.Networking;
 public class ResultadoSujeto : MonoBehaviour
 {
+    public GameObject resultadosContainer;
+    public GameObject perfilContainer;
     [Header("Variables propias de ArchivoCriminal")]
     public TMP_Text nombre;
     public TMP_Text alias;
@@ -19,8 +21,16 @@ public class ResultadoSujeto : MonoBehaviour
 
     public Perfil perfil;
 
+    public TMP_Text nombreTextObj;
+
+    private void Start()
+    {
+        nombreTextObj.text = perfil.nombre;
+    }
+
     public void setThis()
     {
+
 
              nombre.text = perfil.nombre;
              alias.text = perfil.alias;
@@ -29,16 +39,21 @@ public class ResultadoSujeto : MonoBehaviour
              nivelDeActividad.SetLevel(Convert.ToInt32(perfil.nivelDeActividad));
              nivelDePeligrosidad.SetLevel(Convert.ToInt32(perfil.nivelDePeligrosidad));
              sexo.text = perfil.sexo;
-             StartCoroutine(SetPicture(perfil.foto));
+             StartCoroutine(SetPicture(perfil.multimedia.fotografias[0].fotografia));
+
+        
+        
+        
+
     }
 
     IEnumerator SetPicture(string MediaUrl)
     {
-        if (MediaUrl == null)
+        if (MediaUrl.Length < 2)
         {
             MediaUrl = "https://sumaleeboxinggym.com/wp-content/uploads/2018/06/Generic-Profile-1600x1600.png";
         }
-        Debug.Log(MediaUrl);
+        
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(MediaUrl);
         yield return request.SendWebRequest();
         if (request.isNetworkError || request.isHttpError)
@@ -50,7 +65,8 @@ public class ResultadoSujeto : MonoBehaviour
             new Rect(0, 0, tex.width, tex.height), Vector2.zero);
             fotoDePerfil.sprite = sprt;
             fotoDePerfil.color = Color.white;
-            gameObject.SetActive(false);
+            perfilContainer.SetActive(true);
+            resultadosContainer.SetActive(false);
         }
     }
 }

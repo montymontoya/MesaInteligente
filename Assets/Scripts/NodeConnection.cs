@@ -6,7 +6,7 @@ public class NodeConnection : MonoBehaviour
 {
     public Transform NodeToAttatch; // nodo principal
     public Transform childrenNodesParent; // contenedor de nodos hijos
-    public Rigidbody coreNodeRB; // rigidBody del nodo principal
+    //public Rigidbody coreNodeRB; // rigidBody del nodo principal
     public int prevQtyChildren;
     public int actualQtyChildren;
     public Transform[] childrenNodes; // nodos hijos

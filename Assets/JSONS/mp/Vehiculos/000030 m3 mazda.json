@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": "000030",
+    "datosGenerales": {
+      "tipo": "sedan",
+      "marca": "mazda",
+      "modelo": "m 3",
+      "version": "zlt",
+      "color": "blanco",
+      "año": "2016"
+    },
+    "placa": {
+      "estado": "Tlaxcala",
+      "pais": "Mexico",
+      "numero": "hwr8925"
+    },
+    "vinculos": [
+      {
+        "nombre": "",
+        "id": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "data": {
+    "id": "000022",
+    "datosGenerales": {
+      "registro": "512",
+      "carpeta": "ci-18",
+      "tipo": "robo a casa habitacion",
+      "sujetosParticipantes": {
+        "retratosHablados": [],
+        "vestimentas": [],
+        "palabrasIniciales": "",
+        "palabrasFinales": ""
+      },
+      "lesionados": "0",
+      "fallecidos": "0",
+      "modusOperandi": "",
+      "delitosAsociados": [123],
+      "victimas": [
+        {
+          "nombre": "Martha Agüero Fernandez",
+          "edad": "43",
+          "sexo": "f",
+          "procedencia": "Tlaxcala"
+        }
+      ]
+    },
+    "eventos": {
+      "delito": {
+        "fecha": "2020-03-25T13:00:27Z",
+        "ubicacion": {
+          "calle": "olmo",
+          "numero": "14",
+          "interior": "3",
+          "colonia": "zaragoza",
+          "cp": "85300",
+          "zona": "3",
+          "comandancia": "",
+          "ciudad": "tlaxcala",
+          "estado": "tlaxcala",
+          "pais": "mexico",
+          "longitud": "19.413953373726702",
+          "latitud": "-98.14064439117129"
+        }
+      },
+      "preDelito": {
+        "fecha": "",
+        "ubicacion": {
+          "calle": "",
+          "numero": "",
+          "interior": "",
+          "colonia": "",
+          "cp": "",
+          "zona": "",
+          "comandancia": "",
+          "ciudad": "",
+          "estado": "",
+          "pais": "",
+          "longitud": "",
+          "latitud": ""
+        }
+      },
+      "postDelito": {
+        "fecha": "",
+        "ubicacion": {
+          "calle": "",
+          "numero": "",
+          "interior": "",
+          "colonia": "",
+          "cp": "",
+          "zona": "",
+          "comandancia": "",
+          "ciudad": "",
+          "estado": "",
+          "pais": "",
+          "longitud": "",
+          "latitud": ""
+        }
+      },
+      "denuncias": [
+        {
+          "fecha": "2020-05-24T13:25:27Z",
+          "ubicacion": {
+            "calle": "",
+            "numero": "",
+            "interior": "",
+            "colonia": "",
+            "cp": "",
+            "zona": "",
+            "comandancia": "",
+            "ciudad": "",
+            "estado": "",
+            "pais": "",
+            "longitud": "19.314316306510303",
+            "latitud": "-98.25009121358241"
+          }
+        }
+      ],
+      "seguimientos": {
+        "investigaciones": "",
+        "operativos": "",
+        "capturas": "",
+        "procesosJudiciales": "",
+        "reclusiones": ""
+      }
+    },
+    "evidencias": {
+      "imagenes": [],
+      "videos": [],
+      "audios": [],
+      "textos": []
+    },
+    "adn-d": {
+      "victima": {
+        "nombre": "Martha Agüero Fernandez",
+        "edad": "43",
+        "sexo": "f",
+        "procedencia": "tlaxcala"
+      },
+      "delincuente": {
+        "nombre": "Mario Alarcon Benitez",
+        "alias": "El licenciado",
+        "banda": {
+          "id": "000016",
+          "nombre": "Los chochos"
+        },
+        "sexo": "m",
+        "edad": "",
+        "nivelDePeligrosidad": "1",
+        "nivelDeActividad": "3"
+      },
+      "ubicacion": {
+        "calle": "olmo",
+        "numero": "14",
+        "interior": "3",
+        "colonia": "zaragoza",
+        "cp": "85300",
+        "zona": "3",
+        "comandancia": "",
+        "ciudad": "tlaxcala",
+        "estado": "tlaxcala",
+        "pais": "mexico",
+        "longitud": "19.413953373726702",
+        "latitud": "-98.14064439117129"
+      },
+      "ausenciaDePolicia": true,
+      "corrupcion": true
+    }
+  }
+}

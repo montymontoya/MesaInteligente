@@ -1,0 +1,149 @@
+{
+  "data": {
+    "id": "000021",
+    "datosGenerales": {
+      "registro": "123",
+      "carpeta": "ci-98",
+      "tipo": "secuestro",
+      "sujetosParticipantes": {
+        "retratosHablados": [],
+        "vestimentas": [],
+        "palabrasIniciales": "ya te chingaste",
+        "palabrasFinales": ""
+      },
+      "lesionados": "1",
+      "fallecidos": "0",
+      "modusOperandi": "acorralamiento con 1 vehiculo",
+      "delitosAsociados": [],
+      "victimas": [
+        {
+          "nombre": "Gerardo Garcia Hurtado",
+          "edad": "55",
+          "sexo": "m",
+          "procedencia": "Tlaxcala"
+        }
+      ]
+    },
+    "eventos": {
+      "delito": {
+        "fecha": "",
+        "ubicacion": {
+          "calle": "principal",
+          "numero": "147",
+          "interior": "",
+          "colonia": "militares",
+          "cp": "85300",
+          "zona": "3",
+          "comandancia": "",
+          "ciudad": "tlaxcala",
+          "estado": "tlaxcala",
+          "pais": "mexico",
+          "longitud": "19.3050856385969",
+          "latitud": "-98.24550478971193"
+        }
+      },
+      "preDelito": {
+        "fecha": "",
+        "ubicacion": {
+          "calle": "",
+          "numero": "",
+          "interior": "",
+          "colonia": "",
+          "cp": "",
+          "zona": "",
+          "comandancia": "",
+          "ciudad": "",
+          "estado": "",
+          "pais": "",
+          "longitud": "",
+          "latitud": ""
+        }
+      },
+      "postDelito": {
+        "fecha": "",
+        "ubicacion": {
+          "calle": "",
+          "numero": "",
+          "interior": "",
+          "colonia": "",
+          "cp": "",
+          "zona": "",
+          "comandancia": "",
+          "ciudad": "",
+          "estado": "",
+          "pais": "",
+          "longitud": "",
+          "latitud": ""
+        }
+      },
+      "denuncias": [
+        {
+          "fecha": "2020-05-24T13:25:27Z",
+          "ubicacion": {
+            "calle": "",
+            "numero": "",
+            "interior": "",
+            "colonia": "",
+            "cp": "",
+            "zona": "",
+            "comandancia": "",
+            "ciudad": "",
+            "estado": "",
+            "pais": "",
+            "longitud": "",
+            "latitud": ""
+          }
+        }
+      ],
+      "seguimientos": {
+        "investigaciones": "",
+        "operativos": "",
+        "capturas": "",
+        "procesosJudiciales": "",
+        "reclusiones": ""
+      }
+    },
+    "evidencias": {
+      "imagenes": [],
+      "videos": [],
+      "audios": [],
+      "textos": []
+    },
+    "adn-d": {
+      "victima": {
+        "nombre": "Gerardo Garcia Hurtado",
+        "edad": "55",
+        "sexo": "m",
+        "procedencia": "tlaxcala"
+      },
+      "delincuente": {
+        "nombre": "",
+        "alias": "La Baby",
+        "banda": {
+          "id": "000016",
+          "nombre": "Los Civiles"
+        },
+        "sexo": "m",
+        "edad": "31",
+        "nivelDePeligrosidad": "1",
+        "nivelDeActividad": "5"
+      },
+      "ubicacion": {
+        "calle": "principal",
+        "numero": "147",
+        "interior": "",
+        "colonia": "militares",
+        "cp": "85300",
+        "zona": "",
+        "comandancia": "",
+        "ciudad": "tlaxcala",
+        "estado": "tlaxcala",
+        "pais": "mexico",
+        "longitud": "19.3050856385969",
+        "latitud": "-98.24550478971193"
+      },
+      "ausenciaDePolicia": true,
+      "corrupcion": true
+    }
+  }
+}

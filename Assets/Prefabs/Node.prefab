@@ -248,6 +248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToToggle: {fileID: 881111189}
+  onlyON: 0
+  onlyOff: 0
 --- !u!114 &1410383071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToToggle: {fileID: 156214317}
+  onlyON: 0
+  onlyOff: 0
 --- !u!54 &1410383075
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -485,11 +489,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776345414820328188}
-  - component: {fileID: 2666787545547513061}
   - component: {fileID: 3141220002850149461}
   - component: {fileID: 394818272}
   - component: {fileID: 8991812428277017631}
   - component: {fileID: 2189011937829724439}
+  - component: {fileID: 6639925031655430600}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -513,22 +517,6 @@ Transform:
   m_Father: {fileID: 1914682363278927141}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &2666787545547513061
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3924288054307714183}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &3141220002850149461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeToAttatch: {fileID: 776345414820328188}
   childrenNodesParent: {fileID: 883473882066585667}
-  coreNodeRB: {fileID: 2666787545547513061}
   prevQtyChildren: 0
   actualQtyChildren: 0
   childrenNodes: []
@@ -597,6 +584,7 @@ MonoBehaviour:
     sujeto:
       id: 
       datosGenerales:
+        id: 
         nombre: 
         alias: 
         banda:
@@ -622,6 +610,7 @@ MonoBehaviour:
             logos: []
             "se\xF1asParticulares": []
           datosGenerales:
+            id: 
             nombre: 
             alias: 
             banda:
@@ -647,6 +636,7 @@ MonoBehaviour:
                 logos: []
                 "se\xF1asParticulares": []
               datosGenerales:
+                id: 
                 nombre: 
                 alias: 
                 banda:
@@ -672,6 +662,7 @@ MonoBehaviour:
                     logos: []
                     "se\xF1asParticulares": []
                   datosGenerales:
+                    id: 
                     nombre: 
                     alias: 
                     banda:
@@ -693,6 +684,7 @@ MonoBehaviour:
                         longitud: 
                         latitud: 
                       datosGenerales:
+                        id: 
                         nombre: 
                         alias: 
                         sexo: 
@@ -709,6 +701,7 @@ MonoBehaviour:
                         color: 
                         "a\xF1o": 
                       historialDelictivo: []
+                      vinculos: []
                     sexo: 
                     edad: 
                     nivelDeActividad: 
@@ -723,6 +716,7 @@ MonoBehaviour:
                     color: 
                     "a\xF1o": 
                   historialDelictivo: []
+                  vinculos: []
                 sexo: 
                 edad: 
                 nivelDeActividad: 
@@ -737,6 +731,7 @@ MonoBehaviour:
                 color: 
                 "a\xF1o": 
               historialDelictivo: []
+              vinculos: []
             sexo: 
             edad: 
             nivelDeActividad: 
@@ -751,6 +746,7 @@ MonoBehaviour:
             color: 
             "a\xF1o": 
           historialDelictivo: []
+          vinculos: []
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -802,6 +798,7 @@ MonoBehaviour:
         logos: []
         "se\xF1asParticulares": []
       datosGenerales:
+        id: 
         nombre: 
         alias: 
         banda:
@@ -827,6 +824,7 @@ MonoBehaviour:
             logos: []
             "se\xF1asParticulares": []
           datosGenerales:
+            id: 
             nombre: 
             alias: 
             banda:
@@ -852,6 +850,7 @@ MonoBehaviour:
                 logos: []
                 "se\xF1asParticulares": []
               datosGenerales:
+                id: 
                 nombre: 
                 alias: 
                 banda:
@@ -877,6 +876,7 @@ MonoBehaviour:
                     logos: []
                     "se\xF1asParticulares": []
                   datosGenerales:
+                    id: 
                     nombre: 
                     alias: 
                     banda:
@@ -898,6 +898,7 @@ MonoBehaviour:
                         longitud: 
                         latitud: 
                       datosGenerales:
+                        id: 
                         nombre: 
                         alias: 
                         sexo: 
@@ -914,6 +915,7 @@ MonoBehaviour:
                         color: 
                         "a\xF1o": 
                       historialDelictivo: []
+                      vinculos: []
                     sexo: 
                     edad: 
                     nivelDeActividad: 
@@ -928,6 +930,7 @@ MonoBehaviour:
                     color: 
                     "a\xF1o": 
                   historialDelictivo: []
+                  vinculos: []
                 sexo: 
                 edad: 
                 nivelDeActividad: 
@@ -942,6 +945,7 @@ MonoBehaviour:
                 color: 
                 "a\xF1o": 
               historialDelictivo: []
+              vinculos: []
             sexo: 
             edad: 
             nivelDeActividad: 
@@ -956,6 +960,7 @@ MonoBehaviour:
             color: 
             "a\xF1o": 
           historialDelictivo: []
+          vinculos: []
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -970,8 +975,11 @@ MonoBehaviour:
         color: 
         "a\xF1o": 
       historialDelictivo: []
+      vinculos: []
     caso:
+      id: 
       datosGenerales:
+        id: 
         nombre: 
         alias: 
         banda:
@@ -997,6 +1005,7 @@ MonoBehaviour:
             logos: []
             "se\xF1asParticulares": []
           datosGenerales:
+            id: 
             nombre: 
             alias: 
             banda:
@@ -1022,6 +1031,7 @@ MonoBehaviour:
                 logos: []
                 "se\xF1asParticulares": []
               datosGenerales:
+                id: 
                 nombre: 
                 alias: 
                 banda:
@@ -1047,6 +1057,7 @@ MonoBehaviour:
                     logos: []
                     "se\xF1asParticulares": []
                   datosGenerales:
+                    id: 
                     nombre: 
                     alias: 
                     banda:
@@ -1068,6 +1079,7 @@ MonoBehaviour:
                         longitud: 
                         latitud: 
                       datosGenerales:
+                        id: 
                         nombre: 
                         alias: 
                         sexo: 
@@ -1084,6 +1096,7 @@ MonoBehaviour:
                         color: 
                         "a\xF1o": 
                       historialDelictivo: []
+                      vinculos: []
                     sexo: 
                     edad: 
                     nivelDeActividad: 
@@ -1098,6 +1111,7 @@ MonoBehaviour:
                     color: 
                     "a\xF1o": 
                   historialDelictivo: []
+                  vinculos: []
                 sexo: 
                 edad: 
                 nivelDeActividad: 
@@ -1112,6 +1126,7 @@ MonoBehaviour:
                 color: 
                 "a\xF1o": 
               historialDelictivo: []
+              vinculos: []
             sexo: 
             edad: 
             nivelDeActividad: 
@@ -1126,6 +1141,7 @@ MonoBehaviour:
             color: 
             "a\xF1o": 
           historialDelictivo: []
+          vinculos: []
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -1155,9 +1171,11 @@ MonoBehaviour:
             pais: 
             longitud: 
             latitud: 
+      vinculos: []
     arma:
       id: 
       datosGenerales:
+        id: 
         nombre: 
         alias: 
         banda:
@@ -1183,6 +1201,7 @@ MonoBehaviour:
             logos: []
             "se\xF1asParticulares": []
           datosGenerales:
+            id: 
             nombre: 
             alias: 
             banda:
@@ -1208,6 +1227,7 @@ MonoBehaviour:
                 logos: []
                 "se\xF1asParticulares": []
               datosGenerales:
+                id: 
                 nombre: 
                 alias: 
                 banda:
@@ -1233,6 +1253,7 @@ MonoBehaviour:
                     logos: []
                     "se\xF1asParticulares": []
                   datosGenerales:
+                    id: 
                     nombre: 
                     alias: 
                     banda:
@@ -1254,6 +1275,7 @@ MonoBehaviour:
                         longitud: 
                         latitud: 
                       datosGenerales:
+                        id: 
                         nombre: 
                         alias: 
                         sexo: 
@@ -1270,6 +1292,7 @@ MonoBehaviour:
                         color: 
                         "a\xF1o": 
                       historialDelictivo: []
+                      vinculos: []
                     sexo: 
                     edad: 
                     nivelDeActividad: 
@@ -1284,6 +1307,7 @@ MonoBehaviour:
                     color: 
                     "a\xF1o": 
                   historialDelictivo: []
+                  vinculos: []
                 sexo: 
                 edad: 
                 nivelDeActividad: 
@@ -1298,6 +1322,7 @@ MonoBehaviour:
                 color: 
                 "a\xF1o": 
               historialDelictivo: []
+              vinculos: []
             sexo: 
             edad: 
             nivelDeActividad: 
@@ -1312,6 +1337,7 @@ MonoBehaviour:
             color: 
             "a\xF1o": 
           historialDelictivo: []
+          vinculos: []
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -1374,8 +1400,26 @@ MonoBehaviour:
       repuve: 
       seriemotor: 
       serievehiculo: 
+    vinculos: []
   title: 
   titleContainer: {fileID: 1100906303576518625}
+  node: {fileID: 4085667880116062842}
+  nodeParent: {fileID: 883473882066585667}
+  vinculos: []
+  isReady: 0
+--- !u!65 &6639925031655430600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924288054307714183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 0.15, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4085667880116062842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,7 +1465,6 @@ GameObject:
   - component: {fileID: 5002701941489632855}
   - component: {fileID: 7022893203345157624}
   - component: {fileID: 8391031217658677640}
-  - component: {fileID: 19844866279237201}
   m_Layer: 0
   m_Name: btnDespliegue
   m_TagString: Untagged
@@ -1472,9 +1515,9 @@ MonoBehaviour:
   OneClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8391031217658677640}
-        m_TargetAssemblyTypeName: ToogleActive, Assembly-CSharp
-        m_MethodName: ToggleState
+      - m_Target: {fileID: 2189011937829724439}
+        m_TargetAssemblyTypeName: NodeData, Assembly-CSharp
+        m_MethodName: setVinculos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1503,22 +1546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToToggle: {fileID: 156214317}
---- !u!54 &19844866279237201
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8727541660488284833}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  onlyON: 0
+  onlyOff: 0
 --- !u!1 &9219332603837362597
 GameObject:
   m_ObjectHideFlags: 0

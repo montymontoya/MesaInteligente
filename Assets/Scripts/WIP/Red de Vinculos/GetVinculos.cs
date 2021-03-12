@@ -9,6 +9,7 @@ using dataType = Nodo;
 public class GetVinculos : JSONReaderBase
 {
     [Header("Variables propias de GetVinculos")]
+    public int dbIndex;
     public Transform nodeParent;
     public GameObject node;
 
@@ -62,31 +63,67 @@ public class GetVinculos : JSONReaderBase
         var caso = new Caso();
         var arma = new Arma();
         var vehiculo = new Vehiculo();
+        var vinculos = new List<Vinculo>();
 
-        if (data.sujeto.id != null)
+        //vinculos = data.vinculos;
+
+        switch (dbIndex)
         {
-            sujeto = data.sujeto;
+            case 0: // sujeto
+                sujeto = new Sujeto
+                {
+                    id = data.id,
+                    datosGenerales = data.datosGenerales,
+                    mediafiliacion = data.mediafiliacion,
+                    multimedia = data.multimedia,
+                    ubicacionesProbables = data.ubicacionesProbables,
+                    historialDelictivo = data.historialDelictivo,
+                    vinculos = data.vinculos
+                };
+                break;
+            case 1: // banda
+                banda = new Banda
+                {
+                    id = data.id,
+                    datosGenerales = data.datosGenerales,
+                    miembros = data.miembros,
+                    ubicacion = data.ubicacion,
+                    historialDelictivo = data.historialDelictivo,
+                    signos = data.signos,
+                    vinculos = data.vinculos
+                };
+                break;
+            case 2: // caso
+                caso = new Caso
+                {
+                    id = data.id,
+                    datosGenerales = data.datosGenerales,
+                    eventos = data.eventos,
+                    evidencias = data.evidencias,
+                    adn_d = data.adn_d,
+                    vinculos = data.vinculos
+                };
+                break;
+            case 3: // arma
+                arma = new Arma
+                {
+                    id = data.id,
+                    datosGenerales = data.datosGenerales,
+                    vinculos = data.vinculos
+                };
+                break;
+            case 4: // vehiculo
+                vehiculo = new Vehiculo
+                {
+                    id = data.id,
+                    datosGenerales = data.datosGenerales,
+                    placa = data.placa,
+                    arcos = data.arcos
+                };
+                break;
+
         }
-        else
-        {
-            sujeto = new Sujeto
-            {
-                datosGenerales = data.datosGenerales,
-                id = data.id
-            };
-        }
-        if (data.arma.id != null)
-        {
-            arma = data.arma;
-        }
-        else
-        {
-            arma = new Arma
-            {
-                datosGenerales = data.datosGenerales,
-                id = data.id
-            };
-        }
+
 
         drawData.Add(
                 new dataType
@@ -96,6 +133,7 @@ public class GetVinculos : JSONReaderBase
                     caso = caso,
                     arma = arma,
                     vehiculo = vehiculo
+
                 }
                 );
     }

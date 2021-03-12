@@ -10,6 +10,8 @@ using TMPro;
 using dataType = Perfil;
 public class SetArchivoCriminal : JSONReaderBase
 {
+    public GameObject perfilContainer;
+    public GameObject resultadosContainer;
     [Header("Variables propias de SetArchivoCriminal")]
     public TMP_Text nombre;
     public TMP_Text alias;
@@ -23,28 +25,36 @@ public class SetArchivoCriminal : JSONReaderBase
     public Transform dataContainerParent;
     public GameObject dataContainerPrefab;
 
+    public List<Data> jDatas;
     [Header("Variables generales jsonReaderBase")]
     public List<dataType> drawData; // se declara una variable para guardar los datos
 
+
+
     public override void SetDataFrom(List<Data> jData)
     {
+        jDatas = jData;
         drawData = new List<dataType>();
         foreach (var data in jData)
         {
-            var dato = data.perfil;
-            drawData.Add(
-                new dataType
-                {
-                    nombre = dato.nombre,
-                    alias = dato.alias,
-                    banda = dato.banda,
-                    edad = dato.edad,
-                    nivelDeActividad = dato.nivelDeActividad,
-                    nivelDePeligrosidad = dato.nivelDePeligrosidad,
-                    sexo = dato.sexo,
-                    foto = dato.foto
-                }
-                );
+                var _dato = data.datosGenerales;
+                var _multimedia = data.multimedia;
+                drawData.Add(
+                                new dataType
+                                {
+                                    nombre = _dato.nombre,
+                                    alias = _dato.alias,
+                                    banda = _dato.banda,
+                                    edad = _dato.edad,
+                                    nivelDeActividad = _dato.nivelDeActividad,
+                                    nivelDePeligrosidad = _dato.nivelDePeligrosidad,
+                                    sexo = _dato.sexo,
+                                    multimedia = _multimedia
+                                    
+                                }
+                                );
+
+            
         }
 
         foreach (dataType item in drawData)
@@ -54,6 +64,8 @@ public class SetArchivoCriminal : JSONReaderBase
             obj.transform.localPosition = Vector3.zero;
             obj.transform.localEulerAngles = Vector3.zero;
             ResultadoSujeto rS = obj.GetComponent<ResultadoSujeto>();
+            rS.perfilContainer = perfilContainer;
+            rS.resultadosContainer = resultadosContainer;
             rS.nombre = nombre;
             rS.alias = alias;
             rS.banda = banda;

@@ -1,0 +1,80 @@
+{
+	"data": {
+	  "id" : "000003",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Pedro Ramirez Vazquez",
+	  "alias" : "El arquitecto",
+	  "banda " : "Los civiles",
+	  "sexo" : "M",
+	  "edad" : "35",
+	  "nivelDeActividad" : "2",
+	  "nivelDePeligrosidad" : "5"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "",
+	  "complexion" : "",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "la paz",
+	  "numero ": "45",
+	  "interior" : "2",
+	  "colonia ": "Centro",
+	  "cp" : "78500",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Tlaxcala",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "19.404603339705865",
+	  "latitud ": "-98.14120234145274"
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "",
+	  "longitud" : "",
+	  "latitud ": ""
+	},
+	"fecha" : ""
+	}],
+
+	"vinculos" : [{
+	  "id":"000003, 000025,000028, 000004, 000007"
+	}]
+	
+	}
+}

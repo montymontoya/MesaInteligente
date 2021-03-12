@@ -1,0 +1,80 @@
+{
+	"data": {
+	  "id" : "000005",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Mario Alarcon Benitez",
+	  "alias" : "El licenciado",
+	  "banda " : "Los chochos",
+	  "sexo" : "M",
+	  "edad" : "",
+	  "nivelDeActividad" : "3",
+	  "nivelDePeligrosidad" : "1"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "",
+	  "complexion" : "",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "Benito Juarez",
+	  "numero ": "21",
+	  "interior" : "",
+	  "colonia ": "Torres",
+	  "cp" : "78700",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Zacatelco",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "19.4152081729539",
+	  "latitud ": "-19.14854092803243"
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "Robo a casa habitacion 512",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "",
+	  "longitud" : "19.413953373726702",
+	  "latitud ": "-19.14064439117129"
+	},
+	"fecha" : "2020-03-25T13:00:27Z"
+	}],
+
+	"vinculos" : [{
+	  "id":"000027"
+	}]
+	
+	}
+}

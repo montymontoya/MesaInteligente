@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": "000027",
+    "datosGenerales": {
+      "tipo": "suv",
+      "marca": "chevrolet",
+      "modelo": "",
+      "version": "",
+      "color": "",
+      "año": ""
+    },
+    "placa": {
+      "estado": "",
+      "pais": "",
+      "numero": "785"
+    },
+    "vinculos": [
+      {
+        "nombre": "",
+        "id": ""
+      }
+    ]
+  }
+}

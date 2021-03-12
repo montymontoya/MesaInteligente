@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "000025",
+    "datosGenerales": {
+      "tipo": "larga",
+      "marca": "Kalashnikov",
+      "modelo": "ak-47",
+      "calibre": "50mm",
+      "registro": "8300"
+    },
+    "vinculos": [
+      {
+        "nombre": " Pedro Ramirez Vazquez",
+        "id": "000003"
+      }
+    ]
+  }
+}

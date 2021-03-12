@@ -6,6 +6,8 @@ public class ToogleActive : MonoBehaviour
 {
     public GameObject objToToggle;
     private bool status;
+    public bool onlyON = false;
+    public bool onlyOff = false;
     private void Start()
     {
         status = objToToggle.activeSelf;
@@ -14,6 +16,17 @@ public class ToogleActive : MonoBehaviour
     public void ToggleState()
     {
         status = !status;
-        objToToggle.SetActive(status);
+        if (onlyON)
+        {
+            objToToggle.SetActive(true);
+        }
+        else if (onlyOff)
+        {
+            objToToggle.SetActive(false);
+        }
+        else
+        {
+            objToToggle.SetActive(status);
+        }
     }
 }

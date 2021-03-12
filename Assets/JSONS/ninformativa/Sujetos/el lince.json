@@ -1,0 +1,98 @@
+{
+	"data": {
+	  "id" : "000009",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Manuel Viros Flores",
+	  "alias" : "El lince",
+	  "banda " : "",
+	  "sexo" : "M",
+	  "edad" : "",
+	  "nivelDeActividad" : "2",
+	  "nivelDePeligrosidad" : "5"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "",
+	  "complexion" : "Fornida",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "San Pablo del Monte",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "Caso Zacapan",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "Mexico",
+	  "longitud" : "19.409298652867584",
+	  "latitud ": " -98.1529185173459"
+	},
+	"fecha" : "2018-07-28T21:30:27Z"
+         },
+        {        
+             "descripcion" : "Secuestro de Gerardo Garcia Hurtado",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "Mexico",
+	  "longitud" : "19.2316087151261",
+	  "latitud ": " -98.32040733391287"
+	},
+	"fecha" : "2018-07-28T21:30:27Z"
+	}],
+
+	"vinculos" : [{
+	  "id":""
+	}]
+	
+	}
+}

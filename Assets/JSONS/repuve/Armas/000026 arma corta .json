@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "000026",
+    "datosGenerales": {
+      "tipo": "corta",
+      "marca": "",
+      "modelo": "",
+      "calibre": "",
+      "registro": ""
+    },
+    "vinculos": [
+      {
+        "nombre": "",
+        "id": ""
+      }
+    ]
+  }
+}

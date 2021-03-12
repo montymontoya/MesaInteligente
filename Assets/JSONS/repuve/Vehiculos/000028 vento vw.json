@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": "000028",
+    "datosGenerales": {
+      "tipo": "sedan",
+      "marca": "vw",
+      "modelo": "vento",
+      "version": "",
+      "color": "rojo",
+      "año": ""
+    },
+    "placa": {
+      "estado": "puebla",
+      "pais": "mexico",
+      "numero": ""
+    },
+    "vinculos": [
+      {
+        "nombre": " Pedro Ramirez Vazquez",
+        "id": "000003"
+      }
+    ]
+  }
+}

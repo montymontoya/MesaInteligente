@@ -1,0 +1,69 @@
+{
+  "data": {
+    "id": "000018",
+    "datosGenerales": {
+      "nombre": "las marias",
+      "lider": "Maria Jacinto Rivas",
+      "nivelDeActividad": "2",
+      "nivelDePeligrosidad": "1"
+    },
+    "miembros": {
+      "miembrosEstimado": "5",
+      "miembrosConocidos": [Guadalupe Serrano Armendariz
+        {}
+      ]
+    },
+    "ubicacion": {
+      "calle": "",
+      "numero ": "",
+      "interior": "",
+      "colonia ": "",
+      "cp": "",
+      "zona ": "10",
+      "comandancia": "",
+      "ciudad ": "Chiatempan",
+      "estado": "Tlaxcala",
+      "pais ": "Mexico",
+      "longitud": "19.314400398086637",
+      "latitud ": " -19.19165275696139"
+    },
+    "historialDelictivo": [
+      {
+        "descripcion": "Caso Zacapan",
+        "direccion": {
+          "calle": "",
+          "numero ": "",
+          "interior": "",
+          "colonia ": "",
+          "cp": "",
+          "zona ": "",
+          "comandancia": "",
+          "ciudad ": "",
+          "estado": "",
+          "pais ": "",
+          "longitud": "19.409298652867584",
+          "latitud ": " -98.1529185173459"
+        },
+        "fecha": "2018-09-03T15:00:27Z"
+      }
+    ],
+    "signos": {
+      "logos": [
+        {
+          "logo": ""
+        }
+      ],
+      "señasParticulares": [
+        {
+          "seña": ""
+        }
+      ]
+    },
+    "vinculos": [
+      {
+        "nombre": "",
+        "id": ""
+      }
+    ]
+  }
+}

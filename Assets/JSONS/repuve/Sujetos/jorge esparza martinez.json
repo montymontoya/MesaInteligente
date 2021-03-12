@@ -1,0 +1,80 @@
+{
+	"data": {
+	  "id" : "000006",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Jorge Esparza Martinez",
+	  "alias" : "",
+	  "banda " : "Los chochos",
+	  "sexo" : "M",
+	  "edad" : "25",
+	  "nivelDeActividad" : "2",
+	  "nivelDePeligrosidad" : "2"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "",
+	  "complexion" : "Robusta",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "",
+	  "longitud" : "",
+	  "latitud ": ""
+	},
+	"fecha" : ""
+	}],
+
+	"vinculos" : [{
+	  "id":""
+	}]
+	
+	}
+}

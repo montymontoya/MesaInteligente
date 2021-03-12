@@ -1,0 +1,80 @@
+{
+	"data": {
+	  "id" : "000004",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Luis Gracia Lopez",
+	  "alias" : "El maistro",
+	  "banda " : "Los civiles",
+	  "sexo" : "M",
+	  "edad" : "19",
+	  "nivelDeActividad" : "2",
+	  "nivelDePeligrosidad" : "5"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "Aguila en la espalda",
+	  "acento " : "Centroamericano",
+	  "estatura" : "1.65",
+	  "complexion" : "",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Tlaxcala",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "",
+	  "longitud" : "",
+	  "latitud ": ""
+	},
+	"fecha" : ""
+	}],
+
+	"vinculos" : [{
+	  "id":"000003, 000024,000027"
+	}]
+	
+	}
+}

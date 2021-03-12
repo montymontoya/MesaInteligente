@@ -35,11 +35,14 @@ public class JSONReaderBase : MonoBehaviour
     [Header("Catálogo de Tickets resultate/Debug")]
     */
 
-    [Header("TEST JSON READER")]
-
+    //[Header("TEST JSON READER")]
+    [HideInInspector]
     public bool isReady = false; // esta bandera sirve de apoyo para indicarle al sistema hasta cuando dejar de ejecutarse.
+    [HideInInspector]
     public bool listReady; // esta bandera sirve de apoyo para saber en qué momento ya existen datos
+    [HideInInspector]
     public string texto;
+
     public List<Data> jsonData;
 
     public void InitLocalPath(string localPath)
@@ -78,7 +81,8 @@ public class JSONReaderBase : MonoBehaviour
         else
         {
             texto = www.downloadHandler.text;
-            Debug.Log(texto.Length);
+            //Debug.Log(texto.Length);
+            //Debug.Log(texto.Length);
             if (texto.Length>1)
             {
                 var json = JsonUtility.FromJson<Root>(texto);

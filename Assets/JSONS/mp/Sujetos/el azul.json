@@ -1,0 +1,80 @@
+{
+	"data": {
+	  "id" : "000008",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Ramon Aurelio Sanchez",
+	  "alias" : "El azul",
+	  "banda " : "Los civiles",
+	  "sexo" : "M",
+	  "edad" : "29",
+	  "nivelDeActividad" : "2",
+	  "nivelDePeligrosidad" : "5"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "Tuerto de un ojo",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "1.58",
+	  "complexion" : "Delgada",
+	  "tez" : "Morena",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Apizaco",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "Secuestro de Gerardo Garcia Hurtado",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "Mexico",
+	  "longitud" : "19.2316087151261",
+	  "latitud ": " -98.32040733391287"
+	},
+	"fecha" : "2018-07-28T21:30:27Z"
+	}],
+	
+	"vinculos" : [{
+	  "id":"000003, 000004"
+	}]
+	
+	}
+}

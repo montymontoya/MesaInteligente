@@ -19,71 +19,6 @@ public class Root
 }
 
 
-[Serializable]
-public class Data
-{
-    /****General*****/
-    public string id;
-
-    public CatDelito CatDelito;
-    public CatEstatus CatEstatus;
-    public CatPrioridad CatPrioridad;
-    public string descripcion;
-    public Direccion direccion;
-    public string fechaAtendio;
-    public string fechaCerro;
-    public string fechaCreacion;
-    public string fechaSucedio;
-    public bool figurasPublicas;
-    public string fk_idDelito;
-    public int fk_idPrioridad;
-    public int fk_idStatus;
-    public string Icono;
-    public Identificacion identificacion;
-    public string idTicket;
-    public bool mediosComunicacion;
-    public string origen;
-    public bool relevante;
-    public object streaming;
-
-    /*+++++++++++++++++*/
-
-    public List<Accion> acciones;
-    public Banda banda;
-    public List<Banda> bandas;
-    public Sujeto sujeto;
-    public List<Sujeto> sujetos;
-
-   
-   
-    public DatosGenerales datosGenerales;
-    public MediaFiliacion mediafiliacion;
-    public Multimedia multimedia;
-    public List<Direccion> ubicacionesProbables;
-    public List<Delito> historialDelictivo;
-    public List<Vinculo> vinculos;
-
-    /*+++++++ Para Perfil o Sujeto +++++++*/
-    public Perfil perfil;
-
-    public string nombre;
-    public string alias;
-
-    public string sexo;
-    public string edad;
-    public string nivelDeActividad;
-    public string nivelDePeligrosidad;
-    public string foto;
-    /********* Para Arma ***********/
-
-    public Arma arma;
-
-    /********* Para Caso ***********/
-    public Caso caso;
-
-    /********* Para Vehiculo ***********/
-    public Vehiculo vehiculo;
-}
 
 
 // *** CLASSES FOR PRINCIPAL CLASS *** //
@@ -289,34 +224,6 @@ public class CatUso
     public string title;
 }
 
-[Serializable]
-public class Vehiculo
-{
-    public string anio;
-    public string aseguradora;
-    public CatColor catColor;
-    public CatModelo catModelo;
-    public CatTipo CatTipo;
-    public CatUso CatUso;
-    public bool clasificacion;
-    public string descripcion;
-    public Direccion direccion;
-    public DateTime fecha;
-    public int fk_idColorVehiculo;
-    public int fk_idModeloVehiculo;
-    public int fk_idObjetivo;
-    public string fk_idTicket;
-    public int fk_idTipo;
-    public int fk_idUso;
-    public string foto;
-    public int idVehiculo;
-    public bool isObjetivo;
-    public string placa;
-    public string propietario;
-    public string repuve;
-    public string seriemotor;
-    public string serievehiculo;
-}
 
 
 

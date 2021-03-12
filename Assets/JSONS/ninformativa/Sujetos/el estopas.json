@@ -1,0 +1,98 @@
+{
+	"data": {
+	  "id" : "000002",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "",
+	  "alias" : "el estopas",
+	  "banda " : "",
+	  "sexo" : "M",
+	  "edad" : "",
+	  "nivelDeActividad" : "5",
+	  "nivelDePeligrosidad" : "2"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "Centroamericano",
+	  "estatura" : "",
+	  "complexion" : "",
+	  "tez" : "Morena",
+	  "etc" : "3"
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "Caso Zacapan",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "Mexico",
+	  "longitud" : "19.409298652867584",
+	  "latitud ": " -98.1529185173459"
+	},
+	"fecha" : "2018-09-03T15:00:27Z"
+        },
+        {        
+                  "descripcion" : "Robo a casa Habitacion 512",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Zacatelco",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "19.413953373726702",
+	  "latitud ": " -98.14064439117129"
+	},
+	"fecha" : "2020-03-25T13:00:27Z"
+	}],
+	
+	"vinculos" : [{
+	  "id":""
+	}]
+	
+	}
+}

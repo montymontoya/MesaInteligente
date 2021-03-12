@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": "000029",
+    "datosGenerales": {
+      "tipo": "pick-up",
+      "marca": "",
+      "modelo": "",
+      "version": "",
+      "color": "azul",
+      "año": ""
+    },
+    "placa": {
+      "estado": "",
+      "pais": "",
+      "numero": ""
+    },
+    "vinculos": [
+      {
+        "nombre": "",
+        "id": ""
+      }
+    ]
+  }
+}

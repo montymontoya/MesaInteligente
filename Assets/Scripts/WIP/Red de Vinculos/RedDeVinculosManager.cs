@@ -12,7 +12,8 @@ public class RedDeVinculosManager : ReaderManager
 
     public string texto;
     public Color32[] color;
-    public override void SetObject(GameObject objT, int i)
+
+    public override void SetObject(GameObject objT, int i, int j)
     {
         if (nodeParent.childCount>0)
         {
@@ -26,6 +27,7 @@ public class RedDeVinculosManager : ReaderManager
 
         }
         var t = objT.AddComponent<dataType>();
+        t.dbIndex = j;
         t.node = Node;
         t.color = color[i];
         t.nodeParent = nodeParent;

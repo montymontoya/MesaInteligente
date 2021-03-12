@@ -1,0 +1,80 @@
+{
+	"data": {
+	  "id" : "000007",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "",
+	  "alias" : "La baby",
+	  "banda " : "Los civiles",
+	  "sexo" : "F",
+	  "edad" : "31",
+	  "nivelDeActividad" : "1",
+	  "nivelDePeligrosidad" : "5"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "",
+	  "complexion" : "",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "Secuestro de Gerardo Garcia Hurtado",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "Mexico",
+	  "longitud" : "19.2316087151261",
+	  "latitud ": " -98.32040733391287"
+	},
+	"fecha" : "2018-07-28T21:30:27Z"
+	}],
+	
+	"vinculos" : [{
+	  "id":"000003, 000004"
+	}]
+	
+	}
+}

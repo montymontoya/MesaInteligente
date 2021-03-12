@@ -18,6 +18,7 @@ public class Search : MonoBehaviour
     public bool useAllBDPaths = false;
     public GameObject[] DBPaths; // GameObject que contiene una componente SimpleText
     public string[] param;
+    public List<int> queBuscar;
     public List<SearchOn> dondeBuscar;
 
     private List<string> temp;
@@ -36,6 +37,7 @@ public class Search : MonoBehaviour
     public void SearchWithThisData(GameObject[] DBPaths_,TMP_InputField[] inputFields_)
     {
         dondeBuscar = new List<SearchOn>();
+        queBuscar = new List<int>();
         jdx = 0;
         //foreach (var DBPath in DBPaths)
         foreach (var db in DBPaths_)
@@ -43,12 +45,15 @@ public class Search : MonoBehaviour
             if (DBPaths[jdx].activeSelf || useAllBDPaths)
             {
                 var DBPathText = DBPaths_[jdx].GetComponent<SimpleText>().Text;
-                temp = new List<string>(); idx = 0;
+                temp = new List<string>();
+
+                idx = 0;
                 foreach (var input in inputFields_)
                 {
                     if (inputContainerParent[idx].activeSelf)
                     {
                         temp.Add(DBPathText + "/" +param[idx] +"/"+ input.text + ".json");
+                        queBuscar.Add(idx);
                     }
                     idx++;
                 }
@@ -60,7 +65,7 @@ public class Search : MonoBehaviour
         {
             if (dondeBuscar[0].buscarEsto.Count>0)
             {
-                manager.SetData(dondeBuscar);
+                manager.SetData(dondeBuscar, queBuscar);
             }
             else
             {

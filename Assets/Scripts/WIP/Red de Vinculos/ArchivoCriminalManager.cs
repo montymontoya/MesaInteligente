@@ -9,6 +9,8 @@ public class ArchivoCriminalManager : ReaderManager
 {
     //General
     public string texto;
+    public GameObject perfilContainer;
+    public GameObject resultadosContainer;
     public Transform resultadoParent;
     public GameObject resultadoPrefab;
     //Propias
@@ -22,9 +24,23 @@ public class ArchivoCriminalManager : ReaderManager
     public SetNiveles nivelDePeligrosidad;
     public Image fotoDePerfil;
     //
-    public override void SetObject(GameObject objT, int i)
+    public override void SetObject(GameObject objT, int i, int j)
     {
+        if (resultadoParent.childCount > 0)
+        {
+            foreach (var child in resultadoParent.GetComponentsInChildren<Transform>())
+            {
+                if (child != resultadoParent)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+
+        }
+
         var t = objT.AddComponent<dataType>();
+        t.perfilContainer = perfilContainer;
+        t.resultadosContainer = resultadosContainer;
         t.dataContainerParent = resultadoParent;
         t.dataContainerPrefab = resultadoPrefab;
 

@@ -85,8 +85,8 @@ public class CapasIncidencias : JSONReaderBase
             listData.Add(
                 new dataType
                 {
-                    idTicket = data.idTicket,
-                    tipo = data.CatDelito.nombre,
+                    idTicket = data.id,
+                    //tipo = data.CatDelito.nombre,
                     direccion = data.direccion,
                 }
                 );
