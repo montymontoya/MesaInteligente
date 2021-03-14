@@ -1,5 +1,5 @@
 {
-  "data": {
+  "data": [{
     "id": "000017",
     "datosGenerales": {
       "nombre": "los alarcones",
@@ -9,9 +9,7 @@
     },
     "miembros": {
       "miembrosEstimado": "",
-      "miembrosConocidos": [
-        {}
-      ]
+      "miembrosConocidos": [ ]
     },
     "ubicacion": {
       "calle": "",
@@ -48,22 +46,9 @@
       }
     ],
     "signos": {
-      "logos": [
-        {
-          "logo": ""
-        }
-      ],
-      "señasParticulares": [
-        {
-          "seña": ""
-        }
-      ]
+      "logos": [ ],
+      "señasParticulares": []
     },
-    "vinculos": [
-      {
-        "nombre": "",
-        "id": ""
-      }
-    ]
-  }
+    "vinculos": [ ]
+  }]
 }

@@ -1,0 +1,135 @@
+{
+  "data": [{
+    "id": "000015",
+    "datosGenerales": {
+      "nombre": "los chochos",
+      "lider": "Mario alarcon benitez",
+      "nivelDeActividad": "4",
+      "nivelDePeligrosidad": "5"
+    },
+    "miembros": {
+      "miembrosEstimado": "50",
+      "miembrosConocidos": [
+        {}
+      ]
+    },
+    "ubicacion": {
+      "calle": "",
+      "numero ": "",
+      "interior": "",
+      "colonia ": "",
+      "cp": "",
+      "zona ": "5",
+      "comandancia": "",
+      "ciudad ": "Tlaxcala",
+      "estado": "Tlaxcala",
+      "pais ": "Mexico",
+      "longitud": "19.304573265848635",
+      "latitud ": "-98.23891412150412"
+    },
+    "historialDelictivo": [
+      {
+        "descripcion": "secuestro de Gerardo Garcia Hurtado",
+        "direccion": {
+          "calle": "",
+          "numero ": "",
+          "interior": "",
+          "colonia ": "",
+          "cp": "",
+          "zona ": "",
+          "comandancia": "",
+          "ciudad ": "",
+          "estado": "",
+          "pais ": "Mexico",
+          "longitud": "19.2316087151261",
+          "latitud ": " -98.32040733391287"
+        },
+        "fecha": "2018-07-28T21:30:27Z"
+      }
+    ],
+    "signos": {
+      "logos": [
+        {
+          "logo": ""
+        }
+      ],
+      "señasParticulares": [
+        {
+          "seña": ""
+        }
+      ]
+    },
+    "vinculos": [
+      {
+        "nombre": "Los reyes",
+        "id": "000014"
+      }
+    ]
+  },{
+    "id": "000015",
+    "datosGenerales": {
+      "nombre": "los chochos",
+      "lider": "Mario alarcon benitez",
+      "nivelDeActividad": "4",
+      "nivelDePeligrosidad": "5"
+    },
+    "miembros": {
+      "miembrosEstimado": "50",
+      "miembrosConocidos": [
+        {}
+      ]
+    },
+    "ubicacion": {
+      "calle": "",
+      "numero ": "",
+      "interior": "",
+      "colonia ": "",
+      "cp": "",
+      "zona ": "5",
+      "comandancia": "",
+      "ciudad ": "Tlaxcala",
+      "estado": "Tlaxcala",
+      "pais ": "Mexico",
+      "longitud": "19.304573265848635",
+      "latitud ": "-98.23891412150412"
+    },
+    "historialDelictivo": [
+      {
+        "descripcion": "secuestro de Gerardo Garcia Hurtado",
+        "direccion": {
+          "calle": "",
+          "numero ": "",
+          "interior": "",
+          "colonia ": "",
+          "cp": "",
+          "zona ": "",
+          "comandancia": "",
+          "ciudad ": "",
+          "estado": "",
+          "pais ": "Mexico",
+          "longitud": "19.2316087151261",
+          "latitud ": " -98.32040733391287"
+        },
+        "fecha": "2018-07-28T21:30:27Z"
+      }
+    ],
+    "signos": {
+      "logos": [
+        {
+          "logo": ""
+        }
+      ],
+      "señasParticulares": [
+        {
+          "seña": ""
+        }
+      ]
+    },
+    "vinculos": [
+      {
+        "nombre": "Los reyes",
+        "id": "000014"
+      }
+    ]
+  }]
+}

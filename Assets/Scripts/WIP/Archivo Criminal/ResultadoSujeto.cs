@@ -34,7 +34,7 @@ public class ResultadoSujeto : MonoBehaviour
 
              nombre.text = perfil.nombre;
              alias.text = perfil.alias;
-             banda.text = perfil.nombre;
+             banda.text = perfil.banda.datosGenerales.nombre;
              edad.text = perfil.edad;
              nivelDeActividad.SetLevel(Convert.ToInt32(perfil.nivelDeActividad));
              nivelDePeligrosidad.SetLevel(Convert.ToInt32(perfil.nivelDePeligrosidad));

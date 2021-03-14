@@ -5,7 +5,8 @@ using UnityEngine;
 public class NodeEdge : MonoBehaviour
 {
     public LineRenderer edge;
-    public Transform NodeToAttatch;
+    public Transform nodeToAttatch;
+    public Transform node;
     public Transform nodeParent;
     
     public int vertexCount = 100;
@@ -24,18 +25,19 @@ public class NodeEdge : MonoBehaviour
 
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        if (NodeToAttatch)
+        if (nodeToAttatch)
         {
             pointList = new Vector3[vertexCount];
             edge.positionCount = vertexCount;
             int idx = 0;
             foreach (var point in pointList)
             {
-                p0 = nodeParent.InverseTransformPoint(NodeToAttatch.position);
-                p2 = this.transform.localPosition;
+                p0 = nodeParent.InverseTransformPoint(nodeToAttatch.position);
+                p2 = node.localPosition;
                 p1 = (p0 + p2)/4;
                 p3 = p1 * 3;
                 signos.y = Mathf.Sign(p0.y + p2.y);

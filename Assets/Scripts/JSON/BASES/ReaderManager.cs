@@ -19,6 +19,7 @@ public class ReaderManager : MonoBehaviour
         }
         DBPath = dbPath; // la varibale local DBPath es rellenada con la variable externa dbPath
         int idx = 0; // se inicializa el indice con 0
+        int i = 0;
         foreach (var path in DBPath) // por cada ruta dentro de la lista de rutas
         {
             var obj = Instantiate<GameObject>(t); // se instancia un objeto vacío t(idx)
@@ -31,19 +32,19 @@ public class ReaderManager : MonoBehaviour
                 */
                 var baseDato = idx;
                 var obj_ = Instantiate<GameObject>(t); // se instancia otro objeto vacío t, diferente al primero
-                SetObject(obj_, baseDato, queBuscar[idx]);// se llama a la función SetObject inyectando al objeto vacío y al índice de la base de datos
+                SetObject(obj_, baseDato, queBuscar[i]);// se llama a la función SetObject inyectando al objeto vacío y al índice de la base de datos
                 obj_.transform.parent = obj.transform; //se emparenta este objeto "t" al objeto t(idx)
                 obj_.name = item; // se le pone el nombre al objeto igual al parámetro que se está buscando
                 if (obj_.GetComponent<JSONReaderBase>()) // si el objeto contiene un lector basado en JSONReaderBase
                 {
                     obj_.GetComponent<JSONReaderBase>().InitRemotePath(item); // se realiza la busqueda
                 }
-                
+                i++;
             }
             idx++;
         }
     }
-    public virtual void SetObject(GameObject obj, int i, int j)
+    public virtual void SetObject(GameObject obj, int noDB, int typeOfSearch)
     {
 
     }

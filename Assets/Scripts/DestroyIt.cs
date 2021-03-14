@@ -8,7 +8,11 @@ public class DestroyIt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        esto = this.gameObject;
+        if (esto==null)
+        {
+            esto = this.gameObject;
+        }
+        
     }
 
     // Update is called once per frame

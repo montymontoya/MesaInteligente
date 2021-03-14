@@ -5,7 +5,7 @@ using TMPro;
 using System;
 
 [Serializable]
-public class SearchOn
+public struct SearchOn
 {
     public List<string> buscarEsto;
 }
@@ -24,7 +24,7 @@ public class Search : MonoBehaviour
     private List<string> temp;
     private int idx,jdx;
 
-    public List<string> searchOn;
+
 
     public ReaderManager manager;
 
@@ -36,12 +36,14 @@ public class Search : MonoBehaviour
 
     public void SearchWithThisData(GameObject[] DBPaths_,TMP_InputField[] inputFields_)
     {
+
         dondeBuscar = new List<SearchOn>();
         queBuscar = new List<int>();
         jdx = 0;
         //foreach (var DBPath in DBPaths)
         foreach (var db in DBPaths_)
         {
+            
             if (DBPaths[jdx].activeSelf || useAllBDPaths)
             {
                 var DBPathText = DBPaths_[jdx].GetComponent<SimpleText>().Text;
@@ -50,13 +52,19 @@ public class Search : MonoBehaviour
                 idx = 0;
                 foreach (var input in inputFields_)
                 {
-                    if (inputContainerParent[idx].activeSelf)
+                    if (input != null && input.text.Length > 2)
                     {
-                        temp.Add(DBPathText + "/" +param[idx] +"/"+ input.text + ".json");
+                        if (param[idx].Length > 2)
+                            temp.Add(DBPathText + "/" + param[idx] + "/" + input.text + ".json");
+                        else
+                            temp.Add(DBPathText +  "/" + input.text + ".json");
+
                         queBuscar.Add(idx);
                     }
+                    
                     idx++;
                 }
+
                 dondeBuscar.Add(new SearchOn { buscarEsto = temp });
             }
             jdx++;

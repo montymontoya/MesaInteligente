@@ -29,4 +29,5 @@ public class ToogleActive : MonoBehaviour
             objToToggle.SetActive(status);
         }
     }
-}
+} 
+

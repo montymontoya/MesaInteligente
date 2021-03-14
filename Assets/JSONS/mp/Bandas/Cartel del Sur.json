@@ -1,5 +1,5 @@
 {
-  "data": {
+  "data": [{
     "id": "000011",
     "datosGenerales": {
       "nombre": "Cartel del Sur",
@@ -65,5 +65,5 @@
         "id": "000016"
       }
     ]
-  }
+  }]
 }

@@ -1,5 +1,5 @@
 {
-  "data": {
+  "data": [{
     "id": "000014",
     "datosGenerales": {
       "nombre": "los reyes",
@@ -65,5 +65,5 @@
         "id": "000015"
       }
     ]
-  }
+  }]
 }

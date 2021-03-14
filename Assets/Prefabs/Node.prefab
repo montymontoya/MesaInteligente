@@ -120,7 +120,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881111189}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.005, y: 0.006, z: 0}
   m_LocalScale: {x: 1.501892, y: 0.16652249, z: 0.92646825}
   m_Children:
@@ -281,6 +281,115 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &259004225973425643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2210013966608489215}
+  - component: {fileID: 1609180789455715722}
+  - component: {fileID: 3771039917262624388}
+  - component: {fileID: 2274293553685940281}
+  - component: {fileID: 3907329512712154209}
+  m_Layer: 0
+  m_Name: btnDestroyNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2210013966608489215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259004225973425643}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.441, y: -0.04, z: 0}
+  m_LocalScale: {x: 0.08701938, y: 0.7848412, z: 0.14106657}
+  m_Children: []
+  m_Father: {fileID: 5941444926324979962}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1609180789455715722
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259004225973425643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3771039917262624388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259004225973425643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61580400d8a4d664a947c4f5d4b9997f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightClick: 0
+  OneClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3907329512712154209}
+        m_TargetAssemblyTypeName: DestroyIt, Assembly-CSharp
+        m_MethodName: Destuir
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  DoubleClick:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClickStay:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2274293553685940281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259004225973425643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07295514161a9f045b8adbaf47c1bafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToToggle: {fileID: 156214317}
+  onlyON: 0
+  onlyOff: 0
+--- !u!114 &3907329512712154209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259004225973425643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf8d9b592153da4aaa320242c6e8039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esto: {fileID: 4085667880116062842}
 --- !u!1 &3026256953065552272
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883473882066585667}
+  - component: {fileID: 5776147664662681248}
   m_Layer: 0
   m_Name: Children Nodes
   m_TagString: Untagged
@@ -311,6 +421,25 @@ Transform:
   m_Father: {fileID: 1914682363278927141}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360608 &5776147664662681248
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026256953065552272}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 776345414820328188}
+    weight: 1
 --- !u!1 &3554953738663414638
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,9 +619,6 @@ GameObject:
   m_Component:
   - component: {fileID: 776345414820328188}
   - component: {fileID: 3141220002850149461}
-  - component: {fileID: 394818272}
-  - component: {fileID: 8991812428277017631}
-  - component: {fileID: 2189011937829724439}
   - component: {fileID: 6639925031655430600}
   m_Layer: 0
   m_Name: Core
@@ -529,20 +655,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ea0ffcfc5161e4485fabfd98b0cf22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &394818272
-MonoBehaviour:
+--- !u!65 &6639925031655430600
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3924288054307714183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 0.15, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4085667880116062842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914682363278927141}
+  - component: {fileID: 6063756490224629075}
+  - component: {fileID: 4992399495596675811}
+  - component: {fileID: 4524715332624969255}
+  m_Layer: 0
+  m_Name: Node
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1914682363278927141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4085667880116062842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 776345414820328188}
+  - {fileID: 883473882066585667}
+  - {fileID: 6005944878361833862}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6063756490224629075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4085667880116062842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f29a74bca9fca429bf95f76c6f9678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeToAttatch: {fileID: 776345414820328188}
+  childrenNodesParent: {fileID: 883473882066585667}
+  prevQtyChildren: 0
+  actualQtyChildren: 0
+  childrenNodes: []
+  angle: 0
+--- !u!114 &4992399495596675811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4085667880116062842}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25c823323c5da9a488b4a989dfdd82bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   edge: {fileID: 8192554292732079365}
-  NodeToAttatch: {fileID: 0}
+  nodeToAttatch: {fileID: 0}
+  node: {fileID: 776345414820328188}
   nodeParent: {fileID: 1914682363278927141}
   vertexCount: 50
   deformCoef: 1
@@ -550,31 +744,13 @@ MonoBehaviour:
   p1: {x: 0, y: 0, z: 0}
   p2: {x: 0, y: 0, z: 0}
   p3: {x: 0, y: 0, z: 0}
---- !u!114 &8991812428277017631
+--- !u!114 &4524715332624969255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3924288054307714183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f29a74bca9fca429bf95f76c6f9678, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NodeToAttatch: {fileID: 776345414820328188}
-  childrenNodesParent: {fileID: 883473882066585667}
-  prevQtyChildren: 0
-  actualQtyChildren: 0
-  childrenNodes: []
-  angle: 0
---- !u!114 &2189011937829724439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3924288054307714183}
+  m_GameObject: {fileID: 4085667880116062842}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb4cec7ede8fec64d9b1af442387c507, type: 3}
@@ -589,7 +765,6 @@ MonoBehaviour:
         alias: 
         banda:
           id: 
-          nombre: 
           miembros:
             miembrosEstimado: 
             miembrosConocidos: []
@@ -615,7 +790,6 @@ MonoBehaviour:
             alias: 
             banda:
               id: 
-              nombre: 
               miembros:
                 miembrosEstimado: 
                 miembrosConocidos: []
@@ -641,7 +815,6 @@ MonoBehaviour:
                 alias: 
                 banda:
                   id: 
-                  nombre: 
                   miembros:
                     miembrosEstimado: 
                     miembrosConocidos: []
@@ -667,7 +840,6 @@ MonoBehaviour:
                     alias: 
                     banda:
                       id: 
-                      nombre: 
                       miembros:
                         miembrosEstimado: 
                       ubicacion:
@@ -697,6 +869,7 @@ MonoBehaviour:
                         modelo: 
                         calibre: 
                         registro: 
+                        carpetaDeInvestigacion: 
                         version: 
                         color: 
                         "a\xF1o": 
@@ -712,6 +885,7 @@ MonoBehaviour:
                     modelo: 
                     calibre: 
                     registro: 
+                    carpetaDeInvestigacion: 
                     version: 
                     color: 
                     "a\xF1o": 
@@ -727,6 +901,7 @@ MonoBehaviour:
                 modelo: 
                 calibre: 
                 registro: 
+                carpetaDeInvestigacion: 
                 version: 
                 color: 
                 "a\xF1o": 
@@ -742,6 +917,7 @@ MonoBehaviour:
             modelo: 
             calibre: 
             registro: 
+            carpetaDeInvestigacion: 
             version: 
             color: 
             "a\xF1o": 
@@ -757,6 +933,7 @@ MonoBehaviour:
         modelo: 
         calibre: 
         registro: 
+        carpetaDeInvestigacion: 
         version: 
         color: 
         "a\xF1o": 
@@ -768,16 +945,17 @@ MonoBehaviour:
         Complexion: 
         Tez: 
       multimedia:
+        imagenes: []
         fotografias: []
         identificaciones: []
         videos: []
         audios: []
+        textos: []
       ubicacionesProbables: []
       historialDelictivo: []
       vinculos: []
     banda:
       id: 
-      nombre: 
       miembros:
         miembrosEstimado: 
         miembrosConocidos: []
@@ -803,7 +981,6 @@ MonoBehaviour:
         alias: 
         banda:
           id: 
-          nombre: 
           miembros:
             miembrosEstimado: 
             miembrosConocidos: []
@@ -829,7 +1006,6 @@ MonoBehaviour:
             alias: 
             banda:
               id: 
-              nombre: 
               miembros:
                 miembrosEstimado: 
                 miembrosConocidos: []
@@ -855,7 +1031,6 @@ MonoBehaviour:
                 alias: 
                 banda:
                   id: 
-                  nombre: 
                   miembros:
                     miembrosEstimado: 
                     miembrosConocidos: []
@@ -881,7 +1056,6 @@ MonoBehaviour:
                     alias: 
                     banda:
                       id: 
-                      nombre: 
                       miembros:
                         miembrosEstimado: 
                       ubicacion:
@@ -911,6 +1085,7 @@ MonoBehaviour:
                         modelo: 
                         calibre: 
                         registro: 
+                        carpetaDeInvestigacion: 
                         version: 
                         color: 
                         "a\xF1o": 
@@ -926,6 +1101,7 @@ MonoBehaviour:
                     modelo: 
                     calibre: 
                     registro: 
+                    carpetaDeInvestigacion: 
                     version: 
                     color: 
                     "a\xF1o": 
@@ -941,6 +1117,7 @@ MonoBehaviour:
                 modelo: 
                 calibre: 
                 registro: 
+                carpetaDeInvestigacion: 
                 version: 
                 color: 
                 "a\xF1o": 
@@ -956,6 +1133,7 @@ MonoBehaviour:
             modelo: 
             calibre: 
             registro: 
+            carpetaDeInvestigacion: 
             version: 
             color: 
             "a\xF1o": 
@@ -971,6 +1149,7 @@ MonoBehaviour:
         modelo: 
         calibre: 
         registro: 
+        carpetaDeInvestigacion: 
         version: 
         color: 
         "a\xF1o": 
@@ -984,7 +1163,6 @@ MonoBehaviour:
         alias: 
         banda:
           id: 
-          nombre: 
           miembros:
             miembrosEstimado: 
             miembrosConocidos: []
@@ -1010,7 +1188,6 @@ MonoBehaviour:
             alias: 
             banda:
               id: 
-              nombre: 
               miembros:
                 miembrosEstimado: 
                 miembrosConocidos: []
@@ -1036,7 +1213,6 @@ MonoBehaviour:
                 alias: 
                 banda:
                   id: 
-                  nombre: 
                   miembros:
                     miembrosEstimado: 
                     miembrosConocidos: []
@@ -1062,7 +1238,6 @@ MonoBehaviour:
                     alias: 
                     banda:
                       id: 
-                      nombre: 
                       miembros:
                         miembrosEstimado: 
                       ubicacion:
@@ -1092,6 +1267,7 @@ MonoBehaviour:
                         modelo: 
                         calibre: 
                         registro: 
+                        carpetaDeInvestigacion: 
                         version: 
                         color: 
                         "a\xF1o": 
@@ -1107,6 +1283,7 @@ MonoBehaviour:
                     modelo: 
                     calibre: 
                     registro: 
+                    carpetaDeInvestigacion: 
                     version: 
                     color: 
                     "a\xF1o": 
@@ -1122,6 +1299,7 @@ MonoBehaviour:
                 modelo: 
                 calibre: 
                 registro: 
+                carpetaDeInvestigacion: 
                 version: 
                 color: 
                 "a\xF1o": 
@@ -1137,6 +1315,7 @@ MonoBehaviour:
             modelo: 
             calibre: 
             registro: 
+            carpetaDeInvestigacion: 
             version: 
             color: 
             "a\xF1o": 
@@ -1152,6 +1331,7 @@ MonoBehaviour:
         modelo: 
         calibre: 
         registro: 
+        carpetaDeInvestigacion: 
         version: 
         color: 
         "a\xF1o": 
@@ -1171,6 +1351,9 @@ MonoBehaviour:
             pais: 
             longitud: 
             latitud: 
+        denuncias: []
+        seguimientos: []
+      evidencias: []
       vinculos: []
     arma:
       id: 
@@ -1180,7 +1363,6 @@ MonoBehaviour:
         alias: 
         banda:
           id: 
-          nombre: 
           miembros:
             miembrosEstimado: 
             miembrosConocidos: []
@@ -1206,7 +1388,6 @@ MonoBehaviour:
             alias: 
             banda:
               id: 
-              nombre: 
               miembros:
                 miembrosEstimado: 
                 miembrosConocidos: []
@@ -1232,7 +1413,6 @@ MonoBehaviour:
                 alias: 
                 banda:
                   id: 
-                  nombre: 
                   miembros:
                     miembrosEstimado: 
                     miembrosConocidos: []
@@ -1258,7 +1438,6 @@ MonoBehaviour:
                     alias: 
                     banda:
                       id: 
-                      nombre: 
                       miembros:
                         miembrosEstimado: 
                       ubicacion:
@@ -1288,6 +1467,7 @@ MonoBehaviour:
                         modelo: 
                         calibre: 
                         registro: 
+                        carpetaDeInvestigacion: 
                         version: 
                         color: 
                         "a\xF1o": 
@@ -1303,6 +1483,7 @@ MonoBehaviour:
                     modelo: 
                     calibre: 
                     registro: 
+                    carpetaDeInvestigacion: 
                     version: 
                     color: 
                     "a\xF1o": 
@@ -1318,6 +1499,7 @@ MonoBehaviour:
                 modelo: 
                 calibre: 
                 registro: 
+                carpetaDeInvestigacion: 
                 version: 
                 color: 
                 "a\xF1o": 
@@ -1333,6 +1515,7 @@ MonoBehaviour:
             modelo: 
             calibre: 
             registro: 
+            carpetaDeInvestigacion: 
             version: 
             color: 
             "a\xF1o": 
@@ -1348,111 +1531,205 @@ MonoBehaviour:
         modelo: 
         calibre: 
         registro: 
+        carpetaDeInvestigacion: 
         version: 
         color: 
         "a\xF1o": 
       vinculos: []
     vehiculo:
-      anio: 
-      aseguradora: 
-      catColor:
-        id: 0
-        title: 
-      catModelo:
-        catMarca:
-          id: 0
-          title: 
-        fk_idMarca: 0
-        id: 0
+      id: 
+      datosGenerales:
+        id: 
         nombre: 
-      CatTipo:
-        id: 0
-        title: 
-      CatUso:
-        id: 0
-        title: 
-      clasificacion: 0
-      descripcion: 
-      direccion:
-        calle: 
-        numero: 
-        interior: 
-        colonia: 
-        cp: 
-        zona: 
-        comandancia: 
-        ciudad: 
+        alias: 
+        banda:
+          id: 
+          miembros:
+            miembrosEstimado: 
+            miembrosConocidos: []
+          ubicacion:
+            calle: 
+            numero: 
+            interior: 
+            colonia: 
+            cp: 
+            zona: 
+            comandancia: 
+            ciudad: 
+            estado: 
+            pais: 
+            longitud: 
+            latitud: 
+          signos:
+            logos: []
+            "se\xF1asParticulares": []
+          datosGenerales:
+            id: 
+            nombre: 
+            alias: 
+            banda:
+              id: 
+              miembros:
+                miembrosEstimado: 
+                miembrosConocidos: []
+              ubicacion:
+                calle: 
+                numero: 
+                interior: 
+                colonia: 
+                cp: 
+                zona: 
+                comandancia: 
+                ciudad: 
+                estado: 
+                pais: 
+                longitud: 
+                latitud: 
+              signos:
+                logos: []
+                "se\xF1asParticulares": []
+              datosGenerales:
+                id: 
+                nombre: 
+                alias: 
+                banda:
+                  id: 
+                  miembros:
+                    miembrosEstimado: 
+                    miembrosConocidos: []
+                  ubicacion:
+                    calle: 
+                    numero: 
+                    interior: 
+                    colonia: 
+                    cp: 
+                    zona: 
+                    comandancia: 
+                    ciudad: 
+                    estado: 
+                    pais: 
+                    longitud: 
+                    latitud: 
+                  signos:
+                    logos: []
+                    "se\xF1asParticulares": []
+                  datosGenerales:
+                    id: 
+                    nombre: 
+                    alias: 
+                    banda:
+                      id: 
+                      miembros:
+                        miembrosEstimado: 
+                      ubicacion:
+                        calle: 
+                        numero: 
+                        interior: 
+                        colonia: 
+                        cp: 
+                        zona: 
+                        comandancia: 
+                        ciudad: 
+                        estado: 
+                        pais: 
+                        longitud: 
+                        latitud: 
+                      datosGenerales:
+                        id: 
+                        nombre: 
+                        alias: 
+                        sexo: 
+                        edad: 
+                        nivelDeActividad: 
+                        nivelDePeligrosidad: 
+                        lider: 
+                        tipo: 
+                        marca: 
+                        modelo: 
+                        calibre: 
+                        registro: 
+                        carpetaDeInvestigacion: 
+                        version: 
+                        color: 
+                        "a\xF1o": 
+                      historialDelictivo: []
+                      vinculos: []
+                    sexo: 
+                    edad: 
+                    nivelDeActividad: 
+                    nivelDePeligrosidad: 
+                    lider: 
+                    tipo: 
+                    marca: 
+                    modelo: 
+                    calibre: 
+                    registro: 
+                    carpetaDeInvestigacion: 
+                    version: 
+                    color: 
+                    "a\xF1o": 
+                  historialDelictivo: []
+                  vinculos: []
+                sexo: 
+                edad: 
+                nivelDeActividad: 
+                nivelDePeligrosidad: 
+                lider: 
+                tipo: 
+                marca: 
+                modelo: 
+                calibre: 
+                registro: 
+                carpetaDeInvestigacion: 
+                version: 
+                color: 
+                "a\xF1o": 
+              historialDelictivo: []
+              vinculos: []
+            sexo: 
+            edad: 
+            nivelDeActividad: 
+            nivelDePeligrosidad: 
+            lider: 
+            tipo: 
+            marca: 
+            modelo: 
+            calibre: 
+            registro: 
+            carpetaDeInvestigacion: 
+            version: 
+            color: 
+            "a\xF1o": 
+          historialDelictivo: []
+          vinculos: []
+        sexo: 
+        edad: 
+        nivelDeActividad: 
+        nivelDePeligrosidad: 
+        lider: 
+        tipo: 
+        marca: 
+        modelo: 
+        calibre: 
+        registro: 
+        carpetaDeInvestigacion: 
+        version: 
+        color: 
+        "a\xF1o": 
+      placa:
         estado: 
         pais: 
-        longitud: 
-        latitud: 
-      fk_idColorVehiculo: 0
-      fk_idModeloVehiculo: 0
-      fk_idObjetivo: 0
-      fk_idTicket: 
-      fk_idTipo: 0
-      fk_idUso: 0
-      foto: 
-      idVehiculo: 0
-      isObjetivo: 0
-      placa: 
-      propietario: 
-      repuve: 
-      seriemotor: 
-      serievehiculo: 
+        numero: 
+      arcos: []
+      vinculos: []
     vinculos: []
   title: 
   titleContainer: {fileID: 1100906303576518625}
-  node: {fileID: 4085667880116062842}
+  node: {fileID: 4085667880116062842, guid: 81951bce0abf113499617ced5b205411, type: 3}
   nodeParent: {fileID: 883473882066585667}
+  tp: 0
   vinculos: []
   isReady: 0
---- !u!65 &6639925031655430600
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3924288054307714183}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.25, y: 0.15, z: 0.05}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &4085667880116062842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1914682363278927141}
-  m_Layer: 0
-  m_Name: Node
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1914682363278927141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4085667880116062842}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 776345414820328188}
-  - {fileID: 883473882066585667}
-  - {fileID: 6005944878361833862}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8727541660488284833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,7 +1792,7 @@ MonoBehaviour:
   OneClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2189011937829724439}
+      - m_Target: {fileID: 4524715332624969255}
         m_TargetAssemblyTypeName: NodeData, Assembly-CSharp
         m_MethodName: setVinculos
         m_Mode: 1
@@ -1560,7 +1837,7 @@ GameObject:
   - component: {fileID: 2024249218951148494}
   - component: {fileID: 6985259348231530194}
   m_Layer: 0
-  m_Name: closedNode (1)
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1573,12 +1850,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9219332603837362597}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.72674, y: 1, z: 1}
   m_Children:
   - {fileID: 8396026762328220625}
   - {fileID: 2102867535511604912}
+  - {fileID: 2210013966608489215}
   m_Father: {fileID: 881111190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

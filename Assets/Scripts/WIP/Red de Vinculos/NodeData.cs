@@ -13,7 +13,7 @@ public class NodeData : MonoBehaviour
     public GameObject node;
     public Transform nodeParent;
 
-    private string tp;
+    public int tp;
 
     public List<Vinculo> vinculos;
 
@@ -23,45 +23,11 @@ public class NodeData : MonoBehaviour
     {
 
 
-        //titleContainer.text = title;
+        titleContainer.text = title;
     }
 
-    private void Update()
-    {
-        if (!isReady)
-        {
-            if (data != null)
-            {
-                selectTitle(data);
 
-                var nodoData = data;
-                vinculos = new List<Vinculo>();
-                switch (tp)
-                {
-                    case "sujeto":
-                        vinculos = nodoData.sujeto.vinculos;
-                        break;
-                    case "arma":
-                        vinculos = nodoData.arma.vinculos;
-                        break;
-                }
-                isReady = true;
-            }
-        }
-    }
-
-    void selectTitle(Nodo nodoData)
-    {
-        if (nodoData.sujeto.datosGenerales.alias != null)
-        {
-            titleContainer.text = nodoData.sujeto.datosGenerales.alias;
-        }
-        else if (nodoData.arma.datosGenerales.tipo != null)
-        {
-            titleContainer.text = nodoData.arma.datosGenerales.tipo;
-        }
-        
-    }
+   
 
     public void setVinculos()
     {
@@ -73,16 +39,17 @@ public class NodeData : MonoBehaviour
         {
             var nodo = Instantiate<GameObject>(node);
             var data = nodo.transform.GetChild(0).GetComponent<NodeData>();
-            data = new NodeData();
-
-            nodo.transform.parent = nodeParent;
+            nodo.transform.localPosition = Vector3.zero;
             nodo.transform.localScale = new Vector3(50, 50, 50);
+            nodo.transform.parent = nodeParent;
+
+           
             /* Edge Connection*/
             var edge = nodo.transform.GetChild(0).GetComponent<NodeEdge>();
-            // edge.ChangeLineColor(color, color);
+            //edge.ChangeLineColor(color, color);
             /* Data Setting */
            
-            data.titleContainer.text = vinculo.nombre;
+            //data.titleContainer.text = vinculo.nombre;
             idx++;
         }
     }

@@ -43,15 +43,44 @@ public class GetVinculos : JSONReaderBase
             /*Node Creation and Transform Setting*/
             var nodo = Instantiate<GameObject>(node);
             nodo.transform.parent = nodeParent;
+            nodo.transform.localPosition = Vector3.zero;
             nodo.transform.localScale = new Vector3(50, 50, 50);
             /* Edge Connection*/
-            var edge = nodo.transform.GetChild(0).GetComponent<NodeEdge>();
+            var edge = nodo.transform.GetComponent<NodeEdge>();
             edge.ChangeLineColor(color, color);
             /* Data Setting */
-            var data = nodo.transform.GetChild(0).GetComponent<NodeData>();
+            var data = nodo.transform.GetComponent<NodeData>();
             data.data = value;
-
             
+            
+            if (value.sujeto.id!=null)
+            {
+
+                data.title = value.sujeto.datosGenerales.alias;
+                data.vinculos = value.sujeto.vinculos;
+            }
+            else if (value.banda.id != null)
+            {
+
+                data.title = value.banda.datosGenerales.nombre;
+            }
+            else if (value.arma.id != null)
+            {
+
+                data.title = value.arma.datosGenerales.tipo;
+            }
+            else if (value.caso.id != null)
+            {
+
+                data.title = value.caso.datosGenerales.carpetaDeInvestigacion;
+            }
+
+            else if (value.vehiculo.id != null)
+            {
+ 
+                data.title = value.vehiculo.datosGenerales.modelo;
+            }
+
         }
         isReady = true; // se activa la bandera para indicar que ya terminó su función
     }
@@ -64,9 +93,7 @@ public class GetVinculos : JSONReaderBase
         var arma = new Arma();
         var vehiculo = new Vehiculo();
         var vinculos = new List<Vinculo>();
-
-        //vinculos = data.vinculos;
-
+        
         switch (dbIndex)
         {
             case 0: // sujeto
@@ -81,7 +108,7 @@ public class GetVinculos : JSONReaderBase
                     vinculos = data.vinculos
                 };
                 break;
-            case 1: // banda
+            case 3: // banda
                 banda = new Banda
                 {
                     id = data.id,
@@ -93,7 +120,7 @@ public class GetVinculos : JSONReaderBase
                     vinculos = data.vinculos
                 };
                 break;
-            case 2: // caso
+            case 1: // caso
                 caso = new Caso
                 {
                     id = data.id,
@@ -104,7 +131,7 @@ public class GetVinculos : JSONReaderBase
                     vinculos = data.vinculos
                 };
                 break;
-            case 3: // arma
+            case 2: // arma
                 arma = new Arma
                 {
                     id = data.id,
@@ -132,7 +159,8 @@ public class GetVinculos : JSONReaderBase
                     banda = banda,
                     caso = caso,
                     arma = arma,
-                    vehiculo = vehiculo
+                    vehiculo = vehiculo,
+                    vinculos = data.vinculos
 
                 }
                 );

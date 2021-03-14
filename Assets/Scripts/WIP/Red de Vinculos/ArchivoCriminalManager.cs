@@ -47,7 +47,7 @@ public class ArchivoCriminalManager : ReaderManager
         t.nombre = nombre;
         t.alias = alias;
         t.banda = banda;
-        t.edad = alias;
+        t.edad = edad;
         t.nivelDeActividad = nivelDeActividad;
         t.nivelDePeligrosidad = nivelDePeligrosidad;
         t.sexo = sexo;

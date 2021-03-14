@@ -10,7 +10,6 @@ public class testRead : MonoBehaviour
     public string remotePath;
     public void Start( )
     {
-        Debug.Log(remotePath);
         StartCoroutine(GetRemoteJsonData(remotePath, ""));
 
     }

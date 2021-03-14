@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NodeConnection : MonoBehaviour
 {
-    public Transform NodeToAttatch; // nodo principal
+    public Transform nodeToAttatch; // nodo principal
     public Transform childrenNodesParent; // contenedor de nodos hijos
     //public Rigidbody coreNodeRB; // rigidBody del nodo principal
     public int prevQtyChildren;
@@ -30,22 +30,22 @@ public class NodeConnection : MonoBehaviour
         actualQtyChildren = childrenNodesParent.childCount; // se lee la cantidad de hijos (nodos) en el padre de los nodos
         if (actualQtyChildren != prevQtyChildren && actualQtyChildren > 0) // si hay más nodos
         {
-            angle = 359 / actualQtyChildren;
+            angle = 360 / actualQtyChildren;
             childrenNodes = new Transform[actualQtyChildren]; // se limpia la lista de nodos creando una nueva con un tamaño igual a la cantidad de nodos
             var idx = 0; // se inicializa el contador con 0;
             
             foreach (var item in childrenNodes) // para cada nodo en la lista de nodos
             {
                 
-                childrenNodes[idx] = childrenNodesParent.GetChild(idx).GetChild(0);
+                childrenNodes[idx] = childrenNodesParent.GetChild(idx);
                 /* 
                  * el nodo con indice idx de la lista será el primer hijo (GetChild(0)) de cada nodo (GetChild(idx))
                  * del padre de nodos o contenedor de nodos (childrenNodesParent)
                  */
-
-                childrenNodes[idx].localPosition = posicion((idx)*angle);
+                childrenNodes[idx].localPosition = Vector3.zero;
+                childrenNodes[idx].GetChild(0).localPosition = posicion((idx)*angle);
                 nodeEdge = childrenNodes[idx].GetComponent<NodeEdge>();
-                nodeEdge.NodeToAttatch = NodeToAttatch;
+                nodeEdge.nodeToAttatch = nodeToAttatch;
 
 
                 /*TODO MAGNETIZAR LOS NODOS
@@ -68,11 +68,14 @@ public class NodeConnection : MonoBehaviour
 
     public Vector3 posicion(float degSeparation)
     {
+        var radians = degSeparation * Mathf.PI / 180;
 
         Vector3 pos = new Vector3();
-        pos.x = 2 * Mathf.Sin(degSeparation);
-        pos.y = 2 * Mathf.Cos(degSeparation);
-        pos.z = 1;
+        pos.x = 2 * Mathf.Cos(radians);
+        pos.y = 2 * Mathf.Sin(radians) ;
+        pos.z = Random.Range(-1,1);
+        //if (degSeparation>180)
+          //  pos.z *= -1;
         //Debug.Log(degSeparation+"---" +pos);
         return pos;
     }
