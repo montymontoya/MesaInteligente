@@ -83,7 +83,7 @@ public class JSONReaderBase : MonoBehaviour
             texto = www.downloadHandler.text;
             //Debug.Log(texto.Length);
             //Debug.Log(texto.Length);
-            if (texto.Length>1)
+            if (texto.Length>2)
             {
                 var json = JsonUtility.FromJson<Root>(texto);
                 jsonData = json.data;

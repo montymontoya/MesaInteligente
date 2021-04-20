@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 156214318}
   - component: {fileID: 156214321}
   - component: {fileID: 156214320}
-  - component: {fileID: 156214319}
   m_Layer: 0
   m_Name: openedNode
   m_TagString: Untagged
@@ -27,10 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156214317}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.2939998, z: 0}
-  m_LocalScale: {x: 1.5625, y: 0.7875, z: 1}
+  m_LocalPosition: {x: 0, y: -0.232, z: 2.1}
+  m_LocalScale: {x: 1.1892682, y: 0.6052957, z: 0.99178}
   m_Children:
   - {fileID: 1410383070}
+  - {fileID: 2368905812076039938}
   m_Father: {fileID: 776345414820328188}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -83,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &156214319
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156214317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.99999994, z: 6.1232336e-17}
-  m_Center: {x: -0.000000059604645, y: 0, z: 0}
 --- !u!1 &881111189
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +92,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881111190}
-  - component: {fileID: 1416137714669857012}
   m_Layer: 0
   m_Name: closedNode
   m_TagString: Untagged
@@ -121,26 +107,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881111189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: 0.006, z: 0}
-  m_LocalScale: {x: 1.501892, y: 0.16652249, z: 0.92646825}
+  m_LocalPosition: {x: 0.005, y: 0.006, z: 2}
+  m_LocalScale: {x: 1.501892, y: 0.12905492, z: 0.92646825}
   m_Children:
   - {fileID: 5941444926324979962}
   m_Father: {fileID: 776345414820328188}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!65 &1416137714669857012
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881111189}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.9999999, y: 1, z: 6.123234e-17}
-  m_Center: {x: -0.000000059604645, y: 0.0000009536743, z: 2.3283064e-10}
 --- !u!1 &1410383069
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +125,6 @@ GameObject:
   - component: {fileID: 1410383070}
   - component: {fileID: 1410383074}
   - component: {fileID: 1410383073}
-  - component: {fileID: 1410383072}
   - component: {fileID: 1410383071}
   - component: {fileID: 1410383075}
   m_Layer: 0
@@ -205,19 +177,7 @@ MonoBehaviour:
   OneClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1410383072}
-        m_TargetAssemblyTypeName: ToogleActive, Assembly-CSharp
-        m_MethodName: ToggleState
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1410383072}
+      - m_Target: {fileID: 1410383071}
         m_TargetAssemblyTypeName: ToogleActive, Assembly-CSharp
         m_MethodName: ToggleState
         m_Mode: 1
@@ -235,21 +195,6 @@ MonoBehaviour:
   OnClickStay:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1410383072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410383069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07295514161a9f045b8adbaf47c1bafc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objToToggle: {fileID: 881111189}
-  onlyON: 0
-  onlyOff: 0
 --- !u!114 &1410383071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objToToggle: {fileID: 156214317}
   onlyON: 0
-  onlyOff: 0
+  onlyOff: 1
 --- !u!54 &1410383075
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -390,6 +335,112 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esto: {fileID: 4085667880116062842}
+--- !u!1 &490897551128148763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4980491471169992782}
+  - component: {fileID: 8574879034760964116}
+  - component: {fileID: 6765160113767174141}
+  m_Layer: 5
+  m_Name: Pic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4980491471169992782
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490897551128148763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4.9}
+  m_LocalScale: {x: 1.262, y: 1.262, z: 1.262}
+  m_Children: []
+  m_Father: {fileID: 1806843757417718889}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.3, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8574879034760964116
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490897551128148763}
+  m_CullTransparentMesh: 1
+--- !u!114 &6765160113767174141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490897551128148763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2157518125510405917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2368905812076039938}
+  m_Layer: 0
+  m_Name: Picture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2368905812076039938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157518125510405917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7864938330314118225}
+  m_Father: {fileID: 156214318}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3026256953065552272
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +491,119 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 776345414820328188}
     weight: 1
+--- !u!1 &3330192334527071978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7864938330314118225}
+  - component: {fileID: 3015316863612476721}
+  - component: {fileID: 8054185596353031701}
+  - component: {fileID: 7849824365889077585}
+  - component: {fileID: 3869490962416947248}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7864938330314118225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330192334527071978}
+  m_LocalRotation: {x: -0, y: -0.99018884, z: -0, w: -0.13973597}
+  m_LocalPosition: {x: 0, y: 0, z: -0.082}
+  m_LocalScale: {x: 0.0060924203, y: 0.011970219, z: 0.0073055746}
+  m_Children:
+  - {fileID: 1806843757417718889}
+  m_Father: {fileID: 2368905812076039938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -196.065, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.81, y: 0}
+  m_SizeDelta: {x: 93.3663, y: 95.9236}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &3015316863612476721
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330192334527071978}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &8054185596353031701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330192334527071978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!114 &7849824365889077585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330192334527071978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &3869490962416947248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330192334527071978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b74f09412d54345bc6f30e0cff4272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3554953738663414638
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +783,11 @@ GameObject:
   m_Component:
   - component: {fileID: 776345414820328188}
   - component: {fileID: 3141220002850149461}
-  - component: {fileID: 6639925031655430600}
+  - component: {fileID: 3763362293123287166}
+  - component: {fileID: 3127325501608859215}
+  - component: {fileID: 1110549222178525651}
+  - component: {fileID: 2012041621823351950}
+  - component: {fileID: 4024972360474559101}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -655,8 +823,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ea0ffcfc5161e4485fabfd98b0cf22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &6639925031655430600
-BoxCollider:
+  map: {fileID: 0}
+--- !u!114 &3763362293123287166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924288054307714183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61580400d8a4d664a947c4f5d4b9997f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightClick: 0
+  OneClick:
+    m_PersistentCalls:
+      m_Calls: []
+  DoubleClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4524715332624969255}
+        m_TargetAssemblyTypeName: NodeData, Assembly-CSharp
+        m_MethodName: SetDataToManager
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnClickStay:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3127325501608859215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924288054307714183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a621c7efa1544c45ae800b8d52d0e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fromNode: {fileID: 776345414820328188}
+  toNode: []
+  line: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
+  edges: []
+  vertexCount: 100
+  deformCoef: 1
+  p0: {x: 0, y: 0, z: 0}
+  p1: {x: 0, y: 0, z: 0}
+  p2: {x: 0, y: 0, z: 0}
+  p3: {x: 0, y: 0, z: 0}
+  myCurve: 2
+--- !u!135 &1110549222178525651
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -666,8 +892,36 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 0.15, z: 0.05}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.44
+  m_Center: {x: 0.02, y: -0.16, z: 0}
+--- !u!114 &2012041621823351950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924288054307714183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fad249eacf83747aaa1a7331029f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &4024972360474559101
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924288054307714183}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 10
+  m_AngularDrag: 10
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4085667880116062842
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +1010,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4cec7ede8fec64d9b1af442387c507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jData:
+    id: 
+    descripcion: 
+    direccion:
+      calle: 
+      numero: 
+      interior: 
+      colonia: 
+      cp: 
+      zona: 
+      comandancia: 
+      ciudad: 
+      estado: 
+      pais: 
+      longitud: 
+      latitud: 
+    vinculos: []
+    datosGenerales:
+      id: 
+      nombre: 
+      alias: 
+      banda: 
+      sexo: 
+      edad: 
+      nivelDeActividad: 
+      nivelDePeligrosidad: 
+      lider: 
+      tipo: 
+      marca: 
+      modelo: 
+      calibre: 
+      registro: 
+      carpetaDeInvestigacion: 
+      version: 
+      color: 
+      "a\xF1o": 
+    mediafiliacion:
+      "se\xF1as": []
+      tatuajes: []
+      Acento: 
+      Estatura: 
+      Complexion: 
+      Tez: 
+    multimedia:
+      imagenes: []
+      fotografias: []
+      identificaciones: []
+      videos: []
+      audios: []
+      textos: []
+    ubicacionesProbables: []
+    historialDelictivo: []
+    miembros:
+      miembrosEstimado: 
+      miembrosConocidos: []
+    ubicacion:
+      calle: 
+      numero: 
+      interior: 
+      colonia: 
+      cp: 
+      zona: 
+      comandancia: 
+      ciudad: 
+      estado: 
+      pais: 
+      longitud: 
+      latitud: 
+    signos:
+      logos: []
+      "se\xF1asParticulares": []
+    eventos:
+      delito:
+        descripcion: 
+        direccion:
+          calle: 
+          numero: 
+          interior: 
+          colonia: 
+          cp: 
+          zona: 
+          comandancia: 
+          ciudad: 
+          estado: 
+          pais: 
+          longitud: 
+          latitud: 
+      denuncias: []
+      seguimientos: []
+    evidencias: []
+    placa:
+      estado: 
+      pais: 
+      numero: 
+    arcos: []
   data:
     sujeto:
       id: 
@@ -763,166 +1112,7 @@ MonoBehaviour:
         id: 
         nombre: 
         alias: 
-        banda:
-          id: 
-          miembros:
-            miembrosEstimado: 
-            miembrosConocidos: []
-          ubicacion:
-            calle: 
-            numero: 
-            interior: 
-            colonia: 
-            cp: 
-            zona: 
-            comandancia: 
-            ciudad: 
-            estado: 
-            pais: 
-            longitud: 
-            latitud: 
-          signos:
-            logos: []
-            "se\xF1asParticulares": []
-          datosGenerales:
-            id: 
-            nombre: 
-            alias: 
-            banda:
-              id: 
-              miembros:
-                miembrosEstimado: 
-                miembrosConocidos: []
-              ubicacion:
-                calle: 
-                numero: 
-                interior: 
-                colonia: 
-                cp: 
-                zona: 
-                comandancia: 
-                ciudad: 
-                estado: 
-                pais: 
-                longitud: 
-                latitud: 
-              signos:
-                logos: []
-                "se\xF1asParticulares": []
-              datosGenerales:
-                id: 
-                nombre: 
-                alias: 
-                banda:
-                  id: 
-                  miembros:
-                    miembrosEstimado: 
-                    miembrosConocidos: []
-                  ubicacion:
-                    calle: 
-                    numero: 
-                    interior: 
-                    colonia: 
-                    cp: 
-                    zona: 
-                    comandancia: 
-                    ciudad: 
-                    estado: 
-                    pais: 
-                    longitud: 
-                    latitud: 
-                  signos:
-                    logos: []
-                    "se\xF1asParticulares": []
-                  datosGenerales:
-                    id: 
-                    nombre: 
-                    alias: 
-                    banda:
-                      id: 
-                      miembros:
-                        miembrosEstimado: 
-                      ubicacion:
-                        calle: 
-                        numero: 
-                        interior: 
-                        colonia: 
-                        cp: 
-                        zona: 
-                        comandancia: 
-                        ciudad: 
-                        estado: 
-                        pais: 
-                        longitud: 
-                        latitud: 
-                      datosGenerales:
-                        id: 
-                        nombre: 
-                        alias: 
-                        sexo: 
-                        edad: 
-                        nivelDeActividad: 
-                        nivelDePeligrosidad: 
-                        lider: 
-                        tipo: 
-                        marca: 
-                        modelo: 
-                        calibre: 
-                        registro: 
-                        carpetaDeInvestigacion: 
-                        version: 
-                        color: 
-                        "a\xF1o": 
-                      historialDelictivo: []
-                      vinculos: []
-                    sexo: 
-                    edad: 
-                    nivelDeActividad: 
-                    nivelDePeligrosidad: 
-                    lider: 
-                    tipo: 
-                    marca: 
-                    modelo: 
-                    calibre: 
-                    registro: 
-                    carpetaDeInvestigacion: 
-                    version: 
-                    color: 
-                    "a\xF1o": 
-                  historialDelictivo: []
-                  vinculos: []
-                sexo: 
-                edad: 
-                nivelDeActividad: 
-                nivelDePeligrosidad: 
-                lider: 
-                tipo: 
-                marca: 
-                modelo: 
-                calibre: 
-                registro: 
-                carpetaDeInvestigacion: 
-                version: 
-                color: 
-                "a\xF1o": 
-              historialDelictivo: []
-              vinculos: []
-            sexo: 
-            edad: 
-            nivelDeActividad: 
-            nivelDePeligrosidad: 
-            lider: 
-            tipo: 
-            marca: 
-            modelo: 
-            calibre: 
-            registro: 
-            carpetaDeInvestigacion: 
-            version: 
-            color: 
-            "a\xF1o": 
-          historialDelictivo: []
-          vinculos: []
+        banda: 
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -979,166 +1169,7 @@ MonoBehaviour:
         id: 
         nombre: 
         alias: 
-        banda:
-          id: 
-          miembros:
-            miembrosEstimado: 
-            miembrosConocidos: []
-          ubicacion:
-            calle: 
-            numero: 
-            interior: 
-            colonia: 
-            cp: 
-            zona: 
-            comandancia: 
-            ciudad: 
-            estado: 
-            pais: 
-            longitud: 
-            latitud: 
-          signos:
-            logos: []
-            "se\xF1asParticulares": []
-          datosGenerales:
-            id: 
-            nombre: 
-            alias: 
-            banda:
-              id: 
-              miembros:
-                miembrosEstimado: 
-                miembrosConocidos: []
-              ubicacion:
-                calle: 
-                numero: 
-                interior: 
-                colonia: 
-                cp: 
-                zona: 
-                comandancia: 
-                ciudad: 
-                estado: 
-                pais: 
-                longitud: 
-                latitud: 
-              signos:
-                logos: []
-                "se\xF1asParticulares": []
-              datosGenerales:
-                id: 
-                nombre: 
-                alias: 
-                banda:
-                  id: 
-                  miembros:
-                    miembrosEstimado: 
-                    miembrosConocidos: []
-                  ubicacion:
-                    calle: 
-                    numero: 
-                    interior: 
-                    colonia: 
-                    cp: 
-                    zona: 
-                    comandancia: 
-                    ciudad: 
-                    estado: 
-                    pais: 
-                    longitud: 
-                    latitud: 
-                  signos:
-                    logos: []
-                    "se\xF1asParticulares": []
-                  datosGenerales:
-                    id: 
-                    nombre: 
-                    alias: 
-                    banda:
-                      id: 
-                      miembros:
-                        miembrosEstimado: 
-                      ubicacion:
-                        calle: 
-                        numero: 
-                        interior: 
-                        colonia: 
-                        cp: 
-                        zona: 
-                        comandancia: 
-                        ciudad: 
-                        estado: 
-                        pais: 
-                        longitud: 
-                        latitud: 
-                      datosGenerales:
-                        id: 
-                        nombre: 
-                        alias: 
-                        sexo: 
-                        edad: 
-                        nivelDeActividad: 
-                        nivelDePeligrosidad: 
-                        lider: 
-                        tipo: 
-                        marca: 
-                        modelo: 
-                        calibre: 
-                        registro: 
-                        carpetaDeInvestigacion: 
-                        version: 
-                        color: 
-                        "a\xF1o": 
-                      historialDelictivo: []
-                      vinculos: []
-                    sexo: 
-                    edad: 
-                    nivelDeActividad: 
-                    nivelDePeligrosidad: 
-                    lider: 
-                    tipo: 
-                    marca: 
-                    modelo: 
-                    calibre: 
-                    registro: 
-                    carpetaDeInvestigacion: 
-                    version: 
-                    color: 
-                    "a\xF1o": 
-                  historialDelictivo: []
-                  vinculos: []
-                sexo: 
-                edad: 
-                nivelDeActividad: 
-                nivelDePeligrosidad: 
-                lider: 
-                tipo: 
-                marca: 
-                modelo: 
-                calibre: 
-                registro: 
-                carpetaDeInvestigacion: 
-                version: 
-                color: 
-                "a\xF1o": 
-              historialDelictivo: []
-              vinculos: []
-            sexo: 
-            edad: 
-            nivelDeActividad: 
-            nivelDePeligrosidad: 
-            lider: 
-            tipo: 
-            marca: 
-            modelo: 
-            calibre: 
-            registro: 
-            carpetaDeInvestigacion: 
-            version: 
-            color: 
-            "a\xF1o": 
-          historialDelictivo: []
-          vinculos: []
+        banda: 
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -1161,166 +1192,7 @@ MonoBehaviour:
         id: 
         nombre: 
         alias: 
-        banda:
-          id: 
-          miembros:
-            miembrosEstimado: 
-            miembrosConocidos: []
-          ubicacion:
-            calle: 
-            numero: 
-            interior: 
-            colonia: 
-            cp: 
-            zona: 
-            comandancia: 
-            ciudad: 
-            estado: 
-            pais: 
-            longitud: 
-            latitud: 
-          signos:
-            logos: []
-            "se\xF1asParticulares": []
-          datosGenerales:
-            id: 
-            nombre: 
-            alias: 
-            banda:
-              id: 
-              miembros:
-                miembrosEstimado: 
-                miembrosConocidos: []
-              ubicacion:
-                calle: 
-                numero: 
-                interior: 
-                colonia: 
-                cp: 
-                zona: 
-                comandancia: 
-                ciudad: 
-                estado: 
-                pais: 
-                longitud: 
-                latitud: 
-              signos:
-                logos: []
-                "se\xF1asParticulares": []
-              datosGenerales:
-                id: 
-                nombre: 
-                alias: 
-                banda:
-                  id: 
-                  miembros:
-                    miembrosEstimado: 
-                    miembrosConocidos: []
-                  ubicacion:
-                    calle: 
-                    numero: 
-                    interior: 
-                    colonia: 
-                    cp: 
-                    zona: 
-                    comandancia: 
-                    ciudad: 
-                    estado: 
-                    pais: 
-                    longitud: 
-                    latitud: 
-                  signos:
-                    logos: []
-                    "se\xF1asParticulares": []
-                  datosGenerales:
-                    id: 
-                    nombre: 
-                    alias: 
-                    banda:
-                      id: 
-                      miembros:
-                        miembrosEstimado: 
-                      ubicacion:
-                        calle: 
-                        numero: 
-                        interior: 
-                        colonia: 
-                        cp: 
-                        zona: 
-                        comandancia: 
-                        ciudad: 
-                        estado: 
-                        pais: 
-                        longitud: 
-                        latitud: 
-                      datosGenerales:
-                        id: 
-                        nombre: 
-                        alias: 
-                        sexo: 
-                        edad: 
-                        nivelDeActividad: 
-                        nivelDePeligrosidad: 
-                        lider: 
-                        tipo: 
-                        marca: 
-                        modelo: 
-                        calibre: 
-                        registro: 
-                        carpetaDeInvestigacion: 
-                        version: 
-                        color: 
-                        "a\xF1o": 
-                      historialDelictivo: []
-                      vinculos: []
-                    sexo: 
-                    edad: 
-                    nivelDeActividad: 
-                    nivelDePeligrosidad: 
-                    lider: 
-                    tipo: 
-                    marca: 
-                    modelo: 
-                    calibre: 
-                    registro: 
-                    carpetaDeInvestigacion: 
-                    version: 
-                    color: 
-                    "a\xF1o": 
-                  historialDelictivo: []
-                  vinculos: []
-                sexo: 
-                edad: 
-                nivelDeActividad: 
-                nivelDePeligrosidad: 
-                lider: 
-                tipo: 
-                marca: 
-                modelo: 
-                calibre: 
-                registro: 
-                carpetaDeInvestigacion: 
-                version: 
-                color: 
-                "a\xF1o": 
-              historialDelictivo: []
-              vinculos: []
-            sexo: 
-            edad: 
-            nivelDeActividad: 
-            nivelDePeligrosidad: 
-            lider: 
-            tipo: 
-            marca: 
-            modelo: 
-            calibre: 
-            registro: 
-            carpetaDeInvestigacion: 
-            version: 
-            color: 
-            "a\xF1o": 
-          historialDelictivo: []
-          vinculos: []
+        banda: 
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -1361,166 +1233,7 @@ MonoBehaviour:
         id: 
         nombre: 
         alias: 
-        banda:
-          id: 
-          miembros:
-            miembrosEstimado: 
-            miembrosConocidos: []
-          ubicacion:
-            calle: 
-            numero: 
-            interior: 
-            colonia: 
-            cp: 
-            zona: 
-            comandancia: 
-            ciudad: 
-            estado: 
-            pais: 
-            longitud: 
-            latitud: 
-          signos:
-            logos: []
-            "se\xF1asParticulares": []
-          datosGenerales:
-            id: 
-            nombre: 
-            alias: 
-            banda:
-              id: 
-              miembros:
-                miembrosEstimado: 
-                miembrosConocidos: []
-              ubicacion:
-                calle: 
-                numero: 
-                interior: 
-                colonia: 
-                cp: 
-                zona: 
-                comandancia: 
-                ciudad: 
-                estado: 
-                pais: 
-                longitud: 
-                latitud: 
-              signos:
-                logos: []
-                "se\xF1asParticulares": []
-              datosGenerales:
-                id: 
-                nombre: 
-                alias: 
-                banda:
-                  id: 
-                  miembros:
-                    miembrosEstimado: 
-                    miembrosConocidos: []
-                  ubicacion:
-                    calle: 
-                    numero: 
-                    interior: 
-                    colonia: 
-                    cp: 
-                    zona: 
-                    comandancia: 
-                    ciudad: 
-                    estado: 
-                    pais: 
-                    longitud: 
-                    latitud: 
-                  signos:
-                    logos: []
-                    "se\xF1asParticulares": []
-                  datosGenerales:
-                    id: 
-                    nombre: 
-                    alias: 
-                    banda:
-                      id: 
-                      miembros:
-                        miembrosEstimado: 
-                      ubicacion:
-                        calle: 
-                        numero: 
-                        interior: 
-                        colonia: 
-                        cp: 
-                        zona: 
-                        comandancia: 
-                        ciudad: 
-                        estado: 
-                        pais: 
-                        longitud: 
-                        latitud: 
-                      datosGenerales:
-                        id: 
-                        nombre: 
-                        alias: 
-                        sexo: 
-                        edad: 
-                        nivelDeActividad: 
-                        nivelDePeligrosidad: 
-                        lider: 
-                        tipo: 
-                        marca: 
-                        modelo: 
-                        calibre: 
-                        registro: 
-                        carpetaDeInvestigacion: 
-                        version: 
-                        color: 
-                        "a\xF1o": 
-                      historialDelictivo: []
-                      vinculos: []
-                    sexo: 
-                    edad: 
-                    nivelDeActividad: 
-                    nivelDePeligrosidad: 
-                    lider: 
-                    tipo: 
-                    marca: 
-                    modelo: 
-                    calibre: 
-                    registro: 
-                    carpetaDeInvestigacion: 
-                    version: 
-                    color: 
-                    "a\xF1o": 
-                  historialDelictivo: []
-                  vinculos: []
-                sexo: 
-                edad: 
-                nivelDeActividad: 
-                nivelDePeligrosidad: 
-                lider: 
-                tipo: 
-                marca: 
-                modelo: 
-                calibre: 
-                registro: 
-                carpetaDeInvestigacion: 
-                version: 
-                color: 
-                "a\xF1o": 
-              historialDelictivo: []
-              vinculos: []
-            sexo: 
-            edad: 
-            nivelDeActividad: 
-            nivelDePeligrosidad: 
-            lider: 
-            tipo: 
-            marca: 
-            modelo: 
-            calibre: 
-            registro: 
-            carpetaDeInvestigacion: 
-            version: 
-            color: 
-            "a\xF1o": 
-          historialDelictivo: []
-          vinculos: []
+        banda: 
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -1542,166 +1255,7 @@ MonoBehaviour:
         id: 
         nombre: 
         alias: 
-        banda:
-          id: 
-          miembros:
-            miembrosEstimado: 
-            miembrosConocidos: []
-          ubicacion:
-            calle: 
-            numero: 
-            interior: 
-            colonia: 
-            cp: 
-            zona: 
-            comandancia: 
-            ciudad: 
-            estado: 
-            pais: 
-            longitud: 
-            latitud: 
-          signos:
-            logos: []
-            "se\xF1asParticulares": []
-          datosGenerales:
-            id: 
-            nombre: 
-            alias: 
-            banda:
-              id: 
-              miembros:
-                miembrosEstimado: 
-                miembrosConocidos: []
-              ubicacion:
-                calle: 
-                numero: 
-                interior: 
-                colonia: 
-                cp: 
-                zona: 
-                comandancia: 
-                ciudad: 
-                estado: 
-                pais: 
-                longitud: 
-                latitud: 
-              signos:
-                logos: []
-                "se\xF1asParticulares": []
-              datosGenerales:
-                id: 
-                nombre: 
-                alias: 
-                banda:
-                  id: 
-                  miembros:
-                    miembrosEstimado: 
-                    miembrosConocidos: []
-                  ubicacion:
-                    calle: 
-                    numero: 
-                    interior: 
-                    colonia: 
-                    cp: 
-                    zona: 
-                    comandancia: 
-                    ciudad: 
-                    estado: 
-                    pais: 
-                    longitud: 
-                    latitud: 
-                  signos:
-                    logos: []
-                    "se\xF1asParticulares": []
-                  datosGenerales:
-                    id: 
-                    nombre: 
-                    alias: 
-                    banda:
-                      id: 
-                      miembros:
-                        miembrosEstimado: 
-                      ubicacion:
-                        calle: 
-                        numero: 
-                        interior: 
-                        colonia: 
-                        cp: 
-                        zona: 
-                        comandancia: 
-                        ciudad: 
-                        estado: 
-                        pais: 
-                        longitud: 
-                        latitud: 
-                      datosGenerales:
-                        id: 
-                        nombre: 
-                        alias: 
-                        sexo: 
-                        edad: 
-                        nivelDeActividad: 
-                        nivelDePeligrosidad: 
-                        lider: 
-                        tipo: 
-                        marca: 
-                        modelo: 
-                        calibre: 
-                        registro: 
-                        carpetaDeInvestigacion: 
-                        version: 
-                        color: 
-                        "a\xF1o": 
-                      historialDelictivo: []
-                      vinculos: []
-                    sexo: 
-                    edad: 
-                    nivelDeActividad: 
-                    nivelDePeligrosidad: 
-                    lider: 
-                    tipo: 
-                    marca: 
-                    modelo: 
-                    calibre: 
-                    registro: 
-                    carpetaDeInvestigacion: 
-                    version: 
-                    color: 
-                    "a\xF1o": 
-                  historialDelictivo: []
-                  vinculos: []
-                sexo: 
-                edad: 
-                nivelDeActividad: 
-                nivelDePeligrosidad: 
-                lider: 
-                tipo: 
-                marca: 
-                modelo: 
-                calibre: 
-                registro: 
-                carpetaDeInvestigacion: 
-                version: 
-                color: 
-                "a\xF1o": 
-              historialDelictivo: []
-              vinculos: []
-            sexo: 
-            edad: 
-            nivelDeActividad: 
-            nivelDePeligrosidad: 
-            lider: 
-            tipo: 
-            marca: 
-            modelo: 
-            calibre: 
-            registro: 
-            carpetaDeInvestigacion: 
-            version: 
-            color: 
-            "a\xF1o": 
-          historialDelictivo: []
-          vinculos: []
+        banda: 
         sexo: 
         edad: 
         nivelDeActividad: 
@@ -1730,6 +1284,96 @@ MonoBehaviour:
   tp: 0
   vinculos: []
   isReady: 0
+--- !u!1 &8117488217162503297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806843757417718889}
+  - component: {fileID: 5586868664447375775}
+  - component: {fileID: 2855477886437734963}
+  - component: {fileID: 5820066554747793587}
+  m_Layer: 5
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1806843757417718889
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117488217162503297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4980491471169992782}
+  m_Father: {fileID: 7864938330314118225}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5586868664447375775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117488217162503297}
+  m_CullTransparentMesh: 1
+--- !u!114 &2855477886437734963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117488217162503297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 505672fd3731701419dc3ae4db1a4607, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5820066554747793587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117488217162503297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &8727541660488284833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1386,7 @@ GameObject:
   - component: {fileID: 5002701941489632855}
   - component: {fileID: 7022893203345157624}
   - component: {fileID: 8391031217658677640}
+  - component: {fileID: 1727119052728091536}
   m_Layer: 0
   m_Name: btnDespliegue
   m_TagString: Untagged
@@ -1792,9 +1437,9 @@ MonoBehaviour:
   OneClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4524715332624969255}
-        m_TargetAssemblyTypeName: NodeData, Assembly-CSharp
-        m_MethodName: setVinculos
+      - m_Target: {fileID: 8391031217658677640}
+        m_TargetAssemblyTypeName: ToogleActive, Assembly-CSharp
+        m_MethodName: ToggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1823,8 +1468,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToToggle: {fileID: 156214317}
-  onlyON: 0
+  onlyON: 1
   onlyOff: 0
+--- !u!54 &1727119052728091536
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727541660488284833}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9219332603837362597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,11 +1679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].time
-      value: 1
+      value: 0.96110535
       objectReference: {fileID: 0}
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
@@ -2030,7 +1691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[2].value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4396926979734897548, guid: 333a1692950945f4681b7048a0bb151d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inSlope

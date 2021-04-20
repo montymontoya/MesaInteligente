@@ -12,7 +12,26 @@ public class DragDrop : MonoBehaviour
     private bool isMouseDragging;
     private Vector3 positionOfScreen;
     private Vector3 offsetValue;
-
+    public OnlineMapsTileSetControl map;
+    private bool mapExist;
+    private void Start()
+    {
+        if (map = OnlineMapsTileSetControl.instance)
+        {
+            mapExist = true;
+        }
+        
+    }
+    private void OnMouseOver()
+    {
+        if(mapExist)
+            map.allowUserControl=false;
+    }
+    private void OnMouseExit()
+    {
+        if (mapExist)
+            map.allowUserControl = true;
+    }
     void OnMouseDown()
     {
 

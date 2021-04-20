@@ -7,6 +7,7 @@ using System;
 using UnityEngine.Networking;
 public class ResultadoSujeto : MonoBehaviour
 {
+    public Data jData;
     public GameObject resultadosContainer;
     public GameObject perfilContainer;
     [Header("Variables propias de ArchivoCriminal")]
@@ -34,19 +35,41 @@ public class ResultadoSujeto : MonoBehaviour
 
              nombre.text = perfil.nombre;
              alias.text = perfil.alias;
-             banda.text = perfil.banda.datosGenerales.nombre;
+             banda.text = perfil.banda;
              edad.text = perfil.edad;
              nivelDeActividad.SetLevel(Convert.ToInt32(perfil.nivelDeActividad));
              nivelDePeligrosidad.SetLevel(Convert.ToInt32(perfil.nivelDePeligrosidad));
              sexo.text = perfil.sexo;
+        SetDataToManager();
              StartCoroutine(SetPicture(perfil.multimedia.fotografias[0].fotografia));
-
-        
-        
-        
-
+    }
+    public void SetDataToManager()
+    {
+        var obj = FindBigmanagerRoot(transform);
+        obj.GetComponent<ManagerData>().Set(jData);
     }
 
+    public Transform FindBigmanagerRoot(Transform obj)
+    {
+
+        if (obj.GetComponent<ManagerData>())
+        {
+            return obj;
+        }
+        else
+        {
+            if (obj.parent != null)
+            {
+                obj = FindBigmanagerRoot(obj.parent);
+            }
+            else
+            {
+                return obj;
+            }
+
+        }
+        return obj;
+    }
     IEnumerator SetPicture(string MediaUrl)
     {
         if (MediaUrl.Length < 2)

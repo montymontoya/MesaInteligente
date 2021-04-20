@@ -38,7 +38,7 @@ public class Search : MonoBehaviour
     {
 
         dondeBuscar = new List<SearchOn>();
-        queBuscar = new List<int>();
+        queBuscar = new List<int>(); // indices de tipo como 0 = sujeto 1 = caso 2 = , 3 = banda
         jdx = 0;
         //foreach (var DBPath in DBPaths)
         foreach (var db in DBPaths_)

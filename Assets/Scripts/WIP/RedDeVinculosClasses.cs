@@ -76,7 +76,7 @@ public class DatosGenerales
     /****Sujeto****/
     public string nombre;
     public string alias;
-    public Banda banda;
+    public string banda;
     public string sexo;
     public string edad;
     public string nivelDeActividad; /*Banda tambien*/

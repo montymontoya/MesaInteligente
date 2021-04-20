@@ -8,6 +8,10 @@ using UnityEngine.Networking;
 using dataType = Nodo;
 public class GetVinculos : JSONReaderBase
 {
+    [Header(" Variables de switcheo de pantallas")]
+    public GameObject redDeVinculosParent;
+    public GameObject archivoCriminalParent;
+
     [Header("Variables propias de GetVinculos")]
     public int dbIndex;
     public Transform nodeParent;
@@ -38,6 +42,7 @@ public class GetVinculos : JSONReaderBase
                 }
                 );*/
         }
+        int idx = 0;
         foreach (dataType value in drawData)
         {
             /*Node Creation and Transform Setting*/
@@ -51,13 +56,13 @@ public class GetVinculos : JSONReaderBase
             /* Data Setting */
             var data = nodo.transform.GetComponent<NodeData>();
             data.data = value;
-            
-            
+            data.jData = jData[idx];
             if (value.sujeto.id!=null)
             {
 
                 data.title = value.sujeto.datosGenerales.alias;
                 data.vinculos = value.sujeto.vinculos;
+                
             }
             else if (value.banda.id != null)
             {
@@ -80,7 +85,7 @@ public class GetVinculos : JSONReaderBase
  
                 data.title = value.vehiculo.datosGenerales.modelo;
             }
-
+            idx++;
         }
         isReady = true; // se activa la bandera para indicar que ya terminó su función
     }

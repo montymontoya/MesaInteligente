@@ -57,6 +57,7 @@ public class SetArchivoCriminal : JSONReaderBase
             
         }
 
+        int idx = 0;
         foreach (dataType item in drawData)
         {
             var obj = Instantiate<GameObject>(dataContainerPrefab);
@@ -75,7 +76,8 @@ public class SetArchivoCriminal : JSONReaderBase
             rS.nivelDePeligrosidad = nivelDePeligrosidad;
             rS.fotoDePerfil = foto;
             rS.perfil = item;
-            
+            rS.jData = jData[0];
+            idx++;   
         }
         isReady = true; // se activa la bandera para indicar que ya terminó su función
     }

@@ -132,5 +132,57 @@
         "id": "000016"
       }
     ]
+  },
+{
+    "id": "000017",
+    "datosGenerales": {
+      "nombre": "los alarcones",
+      "lider": "Oscar Alarcon Hernandez",
+      "nivelDeActividad": "1",
+      "nivelDePeligrosidad": "3"
+    },
+    "miembros": {
+      "miembrosEstimado": "",
+      "miembrosConocidos": [ ]
+    },
+    "ubicacion": {
+      "calle": "",
+      "numero ": "",
+      "interior": "",
+      "colonia ": "",
+      "cp": "",
+      "zona ": "",
+      "comandancia": "",
+      "ciudad ": "",
+      "estado": "",
+      "pais ": "",
+      "longitud": "",
+      "latitud ": ""
+    },
+    "historialDelictivo": [
+      {
+        "descripcion": "",
+        "direccion": {
+          "calle": "",
+          "numero ": "",
+          "interior": "",
+          "colonia ": "",
+          "cp": "",
+          "zona ": "",
+          "comandancia": "",
+          "ciudad ": "",
+          "estado": "",
+          "pais ": "",
+          "longitud": "",
+          "latitud ": ""
+        },
+        "fecha": ""
+      }
+    ],
+    "signos": {
+      "logos": [ ],
+      "señasParticulares": []
+    },
+    "vinculos": [ ]
   }]
 }

@@ -1,0 +1,160 @@
+{
+	"data": [{
+	  "id" : "000001",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Juan Carlos Perez Hernandez",
+	  "alias" : "El Capo",
+	  "banda " : "",
+	  "sexo" : "M",
+	  "edad" : "45",
+	  "nivelDeActividad" : "4",
+	  "nivelDePeligrosidad" : "3"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "",
+	  "acento " : "",
+	  "estatura" : "1.8",
+	  "complexion" : "delgada",
+	  "tez" : "blanca",
+	  "etc" : "3"
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Zacatelco",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "Robo a casa Habitacion 512",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Zacatelco",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "19.413953373726702",
+	  "latitud ": " -98.14064439117129"
+	},
+	"fecha" : "2020-03-25T13:00:27Z"
+	}],
+	
+	"vinculos" : []
+	
+	},
+{
+	  "id" : "000004",
+	  
+	  	"datosGenerales": {
+	  "nombre" : "Luis Gracia Lopez",
+	  "alias" : "El maistro",
+	  "banda" : "Los civiles",
+	  "sexo" : "M",
+	  "edad" : "19",
+	  "nivelDeActividad" : "2",
+	  "nivelDePeligrosidad" : "5"
+	},
+	"mediafiliacion": {
+	  
+	  "señas" : "",
+	  "tatuajes" : "Aguila en la espalda",
+	  "acento " : "Centroamericano",
+	  "estatura" : "1.65",
+	  "complexion" : "",
+	  "tez" : "",
+	  "etc" : ""
+	  
+	},
+	"multimedia": {
+	  
+	   "fotografias" : [{ 
+	     "fotografia" : ""
+	   }],
+	  "identificaciones" : [{
+	    "identificacion" : ""
+	    
+	  }],
+	  "videos " : [{
+	    "video" : ""
+	  }],
+	  "audios" : [{ 
+	    "audio" : ""
+	  }]
+	  
+	},
+	"direcciones": [{
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "Tlaxcala",
+	  "estado" : "Tlaxcala",
+	  "pais ": "Mexico",
+	  "longitud" : "",
+	  "latitud ": ""
+	}],
+		"historialDelictivo": [{
+		  "descripcion" : "",
+		  "direccion" : {
+	  "calle" : "",
+	  "numero ": "",
+	  "interior" : "",
+	  "colonia ": "",
+	  "cp" : "",
+	  "zona ": "",
+	  "comandancia" : "",
+	  "ciudad ": "",
+	  "estado" : "",
+	  "pais ": "",
+	  "longitud" : "",
+	  "latitud ": ""
+	},
+	"fecha" : ""
+	}],
+
+	"vinculos" : [{
+	  "id":"000003"
+	},{
+	  "id":"000024"
+	},{
+	  "id":"000027"
+	}]
+	
+	}]
+}

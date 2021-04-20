@@ -5,7 +5,7 @@
 	  	"datosGenerales": {
 	  "nombre" : "Juan Carlos Perez Hernandez",
 	  "alias" : "El Capo",
-	  "banda " : "",
+	  "banda" : " Los Pois",
 	  "sexo" : "M",
 	  "edad" : "45",
 	  "nivelDeActividad" : "4",
@@ -31,7 +31,7 @@
 	    "identificacion" : ""
 	    
 	  }],
-	  "videos " : [{
+	  "videos" : [{
 	    "video" : ""
 	  }],
 	  "audios" : [{ 
@@ -39,35 +39,35 @@
 	  }]
 	  
 	},
-	"direcciones": [{
+	"direccion": [{
 	  "calle" : "",
 	  "numero ": "",
 	  "interior" : "",
 	  "colonia ": "",
 	  "cp" : "",
-	  "zona ": "",
+	  "zona": "",
 	  "comandancia" : "",
 	  "ciudad ": "Zacatelco",
 	  "estado" : "Tlaxcala",
-	  "pais ": "Mexico",
-	  "longitud" : "",
-	  "latitud ": ""
+	  "pais": "Mexico",
+	  "longitud" : "19.413953373726702",
+	  "latitud": "-98.14064439117129"
 	}],
 		"historialDelictivo": [{
 		  "descripcion" : "Robo a casa Habitacion 512",
 		  "direccion" : {
 	  "calle" : "",
-	  "numero ": "",
+	  "numero": "",
 	  "interior" : "",
-	  "colonia ": "",
+	  "colonia": "",
 	  "cp" : "",
-	  "zona ": "",
+	  "zona": "",
 	  "comandancia" : "",
 	  "ciudad ": "Zacatelco",
 	  "estado" : "Tlaxcala",
-	  "pais ": "Mexico",
+	  "pais": "Mexico",
 	  "longitud" : "19.413953373726702",
-	  "latitud ": " -98.14064439117129"
+	  "latitud": " -98.14064439117129"
 	},
 	"fecha" : "2020-03-25T13:00:27Z"
 	}],

@@ -8,16 +8,19 @@ public class ClicController : MonoBehaviour
     private RaycastHit rayHit;
     private GameObject hitObject;
     public bool debug;
+    public Camera cam;
 
     public ClickCounter counter;
     // Update is called once per frame
     private void Start()
     {
         counter = GetComponent<ClickCounter>();
+        if (cam == null)
+            cam = Camera.main;
     }
     void FixedUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out rayHit))
         {

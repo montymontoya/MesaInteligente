@@ -34,9 +34,10 @@ public class OnlineMapsMarkerCreator3D : MonoBehaviour
             mark = manager.Create(lng, lat, marker);
             mark.label = marker.name;
             mark.OnClick += OnMarkerClick;
-            mark.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            mark.transform.GetComponent<BoxCollider>().size = new Vector3(0.5f, 0.5f, 0.5f);
-            mark.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            mark.transform.GetChild(0).localPosition = new Vector3(Random.insideUnitCircle.x * 5, Random.insideUnitCircle.y * 5, 2.5f);
+            mark.transform.GetChild(0).localScale = new Vector3(2.5f, 2.5f, 2.5f);
+            //mark.transform.GetComponent<BoxCollider>().size = new Vector3(0.5f, 0.5f, 0.5f);
+            mark.transform.localRotation = Quaternion.Euler(-90, 0, 0);
            // markers.Add(mark3D.transform.gameObject);
 
             mark.OnLongPress += OnMarkerLongPress;

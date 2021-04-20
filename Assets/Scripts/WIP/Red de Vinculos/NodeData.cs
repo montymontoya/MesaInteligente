@@ -6,6 +6,8 @@ using System;
 using System.Linq;
 public class NodeData : MonoBehaviour
 {
+    public Data jData;
+
     public Nodo data;
     public string title;
     public TMP_Text titleContainer;
@@ -26,7 +28,33 @@ public class NodeData : MonoBehaviour
         titleContainer.text = title;
     }
 
+    public void SetDataToManager()
+    {
+        var obj = FindBigmanagerRoot(transform);
+        obj.GetComponent<ManagerData>().Set(jData);
+    }
 
+    public Transform FindBigmanagerRoot(Transform obj)
+    {
+
+        if (obj.GetComponent<ManagerData>())
+        {
+            return obj;
+        }
+        else
+        {
+            if (obj.parent!=null)
+            {
+                obj = FindBigmanagerRoot(obj.parent);
+            }
+            else
+            {
+                return obj;
+            }
+            
+        }
+        return obj;
+    }
    
 
     public void setVinculos()
@@ -49,7 +77,8 @@ public class NodeData : MonoBehaviour
             //edge.ChangeLineColor(color, color);
             /* Data Setting */
            
-            //data.titleContainer.text = vinculo.nombre;
+            data.titleContainer.text = vinculo.id;
+            
             idx++;
         }
     }

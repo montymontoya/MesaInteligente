@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using dataType = Banda;
+using dataType = Sujeto;
 public class SetSujetosMasBuscados : JSONReaderBase
 {
     public List<Data> jDatas;
     public int dbIndex;
     public List<dataType> drawData;
-    public List<dataType> bandasMasBuscadas;
+    public List<dataType> topList;
     public override void SetDataFrom(List<Data> jData)
     {
         jDatas = jData;
-        Debug.Log(jData.Count);
+        //Debug.Log(jData.Count);
         drawData = new List<dataType>();
         foreach (var data in jData)
         {
@@ -104,25 +104,8 @@ public class SetSujetosMasBuscados : JSONReaderBase
                 break;
         }
 
-        drawData.Add(banda);
-        bool addIt = true;
-
-        for (int i = 0; i < bandasMasBuscadas.Count; i++)
-        {
-            if (bandasMasBuscadas[i].id != banda.id)
-            {
-                addIt = true;
-            }
-            else
-            {
-                addIt = false;
-            }
-        }
-
-        if (addIt)
-        {
-            bandasMasBuscadas.Add(banda);
-        }
+        drawData.Add(sujeto);
+        topList.Add(sujeto);
     }
 }
 

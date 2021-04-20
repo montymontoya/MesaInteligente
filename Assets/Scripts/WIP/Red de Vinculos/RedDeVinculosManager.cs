@@ -6,6 +6,9 @@ using System;
 using dataType = GetVinculos;
 public class RedDeVinculosManager : ReaderManager
 {
+    [Header(" Variables de switcheo de pantallas")]
+    public GameObject redDeVinculosParent;
+    public GameObject archivoCriminalParent;
     [Header("Variables propias de GetVinculos")]
     public Transform nodeParent;
     public GameObject Node;

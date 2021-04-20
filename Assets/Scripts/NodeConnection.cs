@@ -71,9 +71,9 @@ public class NodeConnection : MonoBehaviour
         var radians = degSeparation * Mathf.PI / 180;
 
         Vector3 pos = new Vector3();
-        pos.x = 2 * Mathf.Cos(radians);
-        pos.y = 2 * Mathf.Sin(radians) ;
-        pos.z = Random.Range(-1,1);
+        pos.x = 1.5f* Mathf.Cos(radians);
+        pos.y = 1.5f * Mathf.Sin(radians) ;
+        pos.z = Random.Range(0,1);
         //if (degSeparation>180)
           //  pos.z *= -1;
         //Debug.Log(degSeparation+"---" +pos);
